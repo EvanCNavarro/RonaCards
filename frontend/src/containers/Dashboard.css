@@ -12,5 +12,28 @@
    .Tab1{
        background-color: black;
    }
-    
+
+
+    /* Inactive tab */
+.topnav ul > li > a {
+    background-color: white;
+    color: red;
+}
+.topnav ul > li > a:hover {
+    background-color: pink;
+}
+
+/* Active tab */
+.topnav ul > li.active > a,
+.topnav ul > li.active > a:hover,
+.topnav ul > li.active > a:focus {
+    background-color: red;
+    color: white;
+}
+
+/* Disabled tab */
+.topnav ul > li.disabled > a {
+    background-color: lightgray;
+    color: darkgray;
+}
   }
