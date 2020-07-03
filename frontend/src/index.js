@@ -7,8 +7,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import Login from "./containers/Login";
 // import Signup from "./containers/Signup";
 import Register from "./containers/Register";
-
-ReactDOM.render(<Login />, document.getElementById("root"));
+import Dashboard from "./containers/Dashboard";
+ReactDOM.render(<Dashboard />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
