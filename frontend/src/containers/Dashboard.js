@@ -6,9 +6,9 @@ export default function Dashboard() {
     
     return (
         <div class="topnav">
-        <a class="active" href="#home">CoronaCards</a>
-        <a href="#news">Collection</a>
-        <a href="#contact">Statistics</a>
+        <a href="#home">CoronaCards</a>
+        <a href="#collection">Collection</a>
+        <a href="#statistics">Statistics</a>
         <a href="#account">Account</a>
         <a href="#about">About</a>
 
