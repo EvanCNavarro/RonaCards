@@ -4,7 +4,7 @@
 This is the GitHub Repository for Group 6's "Large Project"; Rona Cards.
 <br/>We plan to create both an Android Mobile Application that implements an Augmented Reality (AR) feature, where collectible cards are shown with hovering 3D representations & a Web Application that users can see all of their collected cards with exclusive additional information.
 ### Team:
-<br/>The team consists of the the following members:
+The team consists of the the following members:
 <br/>&lt;p&gt;Member #1:
     Name: Sandhya Singh
     Role: Project Manager
