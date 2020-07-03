@@ -8,18 +8,18 @@ The team consists of the the following members:
 - Member #1:
     - Name: Sandhya Singh
     - Role: Project Manager
-  - Member #2:
+- Member #2:
     - Name: Evan C. Navarro
     - Role: Database, API
-  - Member #3:
+- Member #3:
     - Name: Ataberk Cirikci
     - Role: Database, Security
-  - Member #4:
+- Member #4:
     - Name: Patrick Bauer
     - Role: Front End (Web/Mobile)
-  - Member #5:
+- Member #5:
     - Name: Faizar Ali
     - Role: Front End (Web/Mobile)
-  - Member #6:
+- Member #6:
     - Name: Mudit Jain
     - Role: Front End (Web/Mobile)
