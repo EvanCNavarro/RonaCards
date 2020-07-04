@@ -1,39 +1,49 @@
 @media all and (min-width: 480px) {
    .topnav {
-       background-color:aqua;
+       background-color:#557bcc;
        padding: 10px;
-       font-size: 20px;
+       font-size: 30px;
        /* text-align: left; */
        /* white-space: nowrap; */
    }
    body{
-       background-color: pink;
+       background-color: white;
    }
-   .Tab1{
-       background-color: black;
-   }
-
+   
 
     /* Inactive tab */
 .topnav ul > li > a {
-    background-color: white;
-    color: red;
+    background-color: #557bcc;
+    color: black;
+    padding: 30px;
+    display:table;
+    width:380px;
+    border:1px solid green;
+    text-align: center;
+    font-weight: bold;
 }
 .topnav ul > li > a:hover {
-    background-color: pink;
+    background-color: #8ac38c;
 }
 
-/* Active tab */
+/* Active tab
 .topnav ul > li.active > a,
 .topnav ul > li.active > a:hover,
 .topnav ul > li.active > a:focus {
-    background-color: red;
+    background-color: black;
     color: white;
-}
+    padding: 30px;
+    display:table;
+    width:380px;
+    border:1px solid green;
+    text-align: center;
+} */
 
 /* Disabled tab */
 .topnav ul > li.disabled > a {
     background-color: lightgray;
     color: darkgray;
-}
+    padding: 20px;
+} 
+
   }
