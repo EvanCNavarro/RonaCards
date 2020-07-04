@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import ReactDOM from "react-dom";
+
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./Register.css";
+import MainPage from "./MainPage.js";
+
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -16,9 +20,14 @@ export default function Login() {
   function handleSubmit(event) {
     event.preventDefault();
   }
+  function mainPage_caller()
+  {
+    ReactDOM.render(<MainPage />, document.getElementById("root"));
+  }
 
   return (
     <div className="Register">
+      <button onClick={mainPage_caller}>Back</button>
       <form onSubmit={handleSubmit}>
         {/* <FormGroup controlId="FirstName" bsSize="large">
           <FormLabel>First Name</FormLabel>

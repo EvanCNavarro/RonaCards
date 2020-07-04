@@ -3,23 +3,31 @@ import ReactDOM from "react-dom";
 
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./Login.css";
+import MainPage from "./MainPage.js";
 
 export default function Login() {
   //const [email, setEmail] = useState("");
   const [UserName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
-  function validateForm() {
+  function validateForm() 
+  {
     return UserName.length > 0 && password.length > 0;
   }
 
-  function handleSubmit(event) {
+  function handleSubmit(event) 
+  {
     event.preventDefault();
+  }
+  function mainPage_caller()
+  {
+    ReactDOM.render(<MainPage />, document.getElementById("root"));
   }
 
 
   return (
     <div className="Login">
+      <button onClick={mainPage_caller}>Back</button>
       <form onSubmit={handleSubmit}>
         <FormGroup controlId="UserName" bsSize="large">
           <FormLabel>Username</FormLabel>
