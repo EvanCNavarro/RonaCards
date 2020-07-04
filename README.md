@@ -1,5 +1,5 @@
 # RonaCards
-### `UCF // COP4331 // Richard Leinecker // Summer // 2020 // Group 6 // Rona Cards`
+### UCF // COP4331 // Richard Leinecker // Summer // 2020 // Group 6 // Rona Cards
 ### Description:
 This is the GitHub Repository for Group 6's "Large Project":
 ### `Rona Cards`
