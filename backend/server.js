@@ -12,9 +12,9 @@ app.use(cors());
 app.use(express.json());
 
 let transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
+    host: 'smtp.gmail.com',
     port: 465,
-    secure: false, // true for 465, false for other ports
+    secure: true, // true for 465, false for other ports
     auth: {
       user: 'ronacards@gmail.com', // made a new email for this
       pass: 'COP4331_G6', //didn't want to set up an email server, or use my real email
@@ -26,12 +26,13 @@ let transporter = nodemailer.createTransport({
 
 // TEST code, remove before we're finished
 
-let info = transporter.sendMail = {
+let info = transporter.sendMail({
             from: '"Rona Cards" <ronacards@gmail.com', // sender address
             to: "ronacards@gmail.com", // list of receivers
             subject: 'testing email', // Subject line
             text: 'testing email functionality',
-        };
+        });
+console.log("Message sent: %s", info.messageId);
 
 const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
