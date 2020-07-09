@@ -64,4 +64,25 @@
     left: 400px;
     top: 200px;
 }
+
+.overview
+{
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.desc
+{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.surprise
+{
+    font-size: 50px;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
   }

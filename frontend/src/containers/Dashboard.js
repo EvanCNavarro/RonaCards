@@ -5,18 +5,18 @@ import { Tabs, Tab } from 'react-bootstrap-tabs';
 
 export default function Dashboard() {
 
-const vari = 10; // connect to API
-const username = "Mudit"; // connect to API
-const email = "faizarali@corona.com"; // connect to API
+  const vari = 10; // connect to API
+  const username = "Mudit"; // connect to API
+  const email = "faizarali@corona.com"; // connect to API
 
   return (
     <div class="topnav">
-      <Tabs  onSelect={(index, label) => console.log(label + ' selected')}>
-        <Tab  class = "topbar" label="CoronaCards">TAB  1 CONTENT</Tab>
-        <Tab  class = "topbar" label="Collection">Tab 2 content</Tab>
-        <Tab  class = "topbar" label="Statistics">Tab 3 content</Tab>
-        <Tab   class = "topbar" label="Account">
-          <div class ="account_box_div">
+      <Tabs onSelect={(index, label) => console.log(label + ' selected')}>
+        <Tab class="topbar" label="CoronaCards">TAB  1 CONTENT</Tab>
+        <Tab class="topbar" label="Collection">Tab 2 content</Tab>
+        <Tab class="topbar" label="Statistics">Tab 3 content</Tab>
+        <Tab class="topbar" label="Account">
+          <div class="account_box_div">
             {/* <img src="account_icon.png" width="500" height="600">
             </img>  */}
             <p><b>Username:</b> {username}</p>
@@ -24,16 +24,25 @@ const email = "faizarali@corona.com"; // connect to API
             <p><b>Password:</b> ******** <button class="password_reset_button">Reset Password</button></p>
             <p><b>Card Count:</b> {vari}</p>
           </div>
-          
+
 
 
         </Tab>
-        <Tab  label="About">
+        <Tab label="About">
+          <h2 class="overview">OVERVIEW</h2>
+          <br />
+          <h2 class="desc">Rona Cards, is an interactive collection card game with the aim of bringing awareness to common symptoms of the COVID-19 virus.</h2>
+          <br />
+          <h2 class="desc">The goal is for people to learn and collect these informational cards, and spread awareness rather than catching and spreading the actual virus.</h2>
+          <br />
+          <h2 class="desc">We hope that by bringing light to some of these symptoms, and by using AR (Augmented Reality) to showcase what they actually look like, we can reduce any number of new cases.</h2>
+          <br />
+          <h2 class="surprise">Collect all of the cards for a surprise!</h2>
         </Tab>
-        <Tab  label="Logout"> </Tab>
+        <Tab label="Logout"> </Tab>
       </Tabs>
 
-    </div>
+    </div >
 
   );
 }
