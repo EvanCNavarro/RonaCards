@@ -1,6 +1,6 @@
 @media all and (min-width: 480px) {
    .topnav {
-       background-color:#557bcc;
+       /* background-color:#557bcc; */
        padding: 10px;
        font-size: 30px;
        /* text-align: left; */
@@ -13,11 +13,11 @@
 
     /* Inactive tab */
 .topnav ul > li > a {
-    background-color: #557bcc;
+    /* background-color: #557bcc; */
     color: black;
     padding: 30px;
     display:table;
-    width:250px;
+    width:215px;
     border:1px solid green;
     text-align: center;
     font-weight: bold;
@@ -46,4 +46,13 @@
     padding: 20px;
 } 
 
+
+.topbar
+{
+    background-color: tomato;
+}
+.password_reset_button
+{
+    width : 100px;
+}
   }
