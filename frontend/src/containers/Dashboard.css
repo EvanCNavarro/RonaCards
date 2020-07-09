@@ -17,7 +17,7 @@
     color: black;
     padding: 30px;
     display:table;
-    width:380px;
+    width:250px;
     border:1px solid green;
     text-align: center;
     font-weight: bold;
@@ -26,7 +26,7 @@
     background-color: #8ac38c;
 }
 
-/* Active tab
+/* Active tab */
 .topnav ul > li.active > a,
 .topnav ul > li.active > a:hover,
 .topnav ul > li.active > a:focus {
@@ -37,7 +37,7 @@
     width:380px;
     border:1px solid green;
     text-align: center;
-} */
+} 
 
 /* Disabled tab */
 .topnav ul > li.disabled > a {

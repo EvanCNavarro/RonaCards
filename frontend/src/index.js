@@ -11,7 +11,7 @@ import Dashboard from "./containers/Dashboard";
 import MainPage from "./containers/MainPage";
 
 
-ReactDOM.render(<MainPage />, document.getElementById("root"));
+ReactDOM.render(<Dashboard />, document.getElementById("root"));
 
 
 
