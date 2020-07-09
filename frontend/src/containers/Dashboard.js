@@ -5,27 +5,31 @@ import { Tabs, Tab } from 'react-bootstrap-tabs';
 
 export default function Dashboard() {
 
-const vari = 10;
-const username = "Mudit";
-const email = "faizarali@corona.com";
+const vari = 10; // connect to API
+const username = "Mudit"; // connect to API
+const email = "faizarali@corona.com"; // connect to API
 
   return (
     <div class="topnav">
-      <Tabs  class = "topbar" onSelect={(index, label) => console.log(label + ' selected')}>
-        <Tab  label="CoronaCards">TAB  1 CONTENT</Tab>
-        <Tab  label="Collection">Tab 2 content</Tab>
-        <Tab  label="Statistics">Tab 3 content</Tab>
-        <Tab  label="Account">
-          <h2>Username: {username}</h2>
-          <h2>Email: {email}</h2>
-          <h2>Password: ******  <button class="password_reset_button">Reset Password</button></h2>
-          <h2>Card Count: {vari}</h2>
+      <Tabs  onSelect={(index, label) => console.log(label + ' selected')}>
+        <Tab  class = "topbar" label="CoronaCards">TAB  1 CONTENT</Tab>
+        <Tab  class = "topbar" label="Collection">Tab 2 content</Tab>
+        <Tab  class = "topbar" label="Statistics">Tab 3 content</Tab>
+        <Tab   class = "topbar" label="Account">
+          <div class ="account_box_div">
+            {/* <img src="account_icon.png" width="500" height="600">
+            </img>  */}
+            <p><b>Username:</b> {username}</p>
+            <p><b>Email:</b> {email}</p>
+            <p><b>Password:</b> ******** <button class="password_reset_button">Reset Password</button></p>
+            <p><b>Card Count:</b> {vari}</p>
+          </div>
+          
 
 
-
-          </Tab>
+        </Tab>
         <Tab  label="About">
-       </Tab>
+        </Tab>
         <Tab  label="Logout"> </Tab>
       </Tabs>
 

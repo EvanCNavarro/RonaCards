@@ -47,12 +47,21 @@
 } 
 
 
-.topbar
-{
-    background-color: tomato;
-}
+
 .password_reset_button
 {
-    width : 100px;
+    width: 250px;
+    background-color:tomato ;
+    border: 2px solid tomato ;
+    border-radius: 5px;
+}
+.account_box_div 
+{
+    font-size: 30px;
+    max-width: 600px;
+    /* border: 3px solid green; */
+    position: relative;
+    left: 400px;
+    top: 200px;
 }
   }
