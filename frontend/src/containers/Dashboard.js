@@ -14,7 +14,15 @@ export default function Dashboard() {
   return (
     <div class="topnav">
       <Tabs onSelect={(index, label) => console.log(label + ' selected')}>
-        <Tab class="topbar" label="CoronaCards">TAB  1 CONTENT</Tab>
+        <Tab class="topbar" label="RonaCards">
+          <div class="rona_cards_tab">
+            <div class="welcome">
+            <p>Welcome to the <u>Dashboard</u>, for your collection of C'Rona Cards! </p>
+            </div>
+          
+          </div>
+          
+        </Tab>
         <Tab class="topbar" label="Collection">Tab 2 content</Tab>
 
         <Tab class="topbar" label="Statistics">Tab 3 content</Tab>
@@ -34,6 +42,7 @@ export default function Dashboard() {
         </Tab>
         
         <Tab label="About">
+          
           <h2 class="overview">OVERVIEW</h2>
           <br />
           <h2 class="desc">Rona Cards, is an interactive collection card game with the aim of bringing awareness to common symptoms of the COVID-19 virus.</h2>
