@@ -6,15 +6,12 @@
        /* text-align: left; */
        /* white-space: nowrap; */
    }
-   body{
-       background-color: white;
-   }
-   
+
 
     /* Inactive tab */
 .topnav ul > li > a {
     /* background-color: #557bcc; */
-    color: black;
+    /* color: black; */
     padding: 30px;
     display:table;
     width:215px;
@@ -27,7 +24,7 @@
 }
 
 /* Active tab */
-.topnav ul > li.active > a,
+/* .topnav ul > li.active > a,
 .topnav ul > li.active > a:hover,
 .topnav ul > li.active > a:focus {
     background-color: black;
@@ -37,14 +34,14 @@
     width:380px;
     border:1px solid green;
     text-align: center;
-} 
+}  */
 
 /* Disabled tab */
-.topnav ul > li.disabled > a {
+/* .topnav ul > li.disabled > a {
     background-color: lightgray;
     color: darkgray;
     padding: 20px;
-} 
+}  */
 
 
 
@@ -59,12 +56,33 @@
 {
     font-size: 30px;
     max-width: 600px;
-    /* border: 3px solid green; */
     position: relative;
-    left: 400px;
+    left: 200px;
     top: 200px;
+    /* border: 2px solid black; */
+    
 }
+.logout_button
+{
+    width: 250px;
+    background-color:tomato ;
+    border: 2px solid tomato ;
+    border-radius: 5px;
 
+
+}
+.account_icon
+{
+    max-width: 300px;
+    max-height: 300px;
+}
+.account_details_box
+{
+    /* border: 2px solid black; */
+    position: relative;
+    left: 350px;
+    bottom: 300px;
+}
 .overview
 {
     font-size: 50px;
