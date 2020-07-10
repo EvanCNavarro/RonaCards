@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./MainPage.css";
 import Login from "./Login.js";
 import Register from "./Register.js";
+import main_logo from './main_logo.png';
 
 
 
@@ -22,6 +22,7 @@ export default function MainPage()
   }
   return(
     <div>
+      <img class="main_logo" src={main_logo} alt="Mascot Logo" />
       <div class="login_register_box">
         <p class="rona_cards">Rona Cards</p>
         <div class ="button_box">
