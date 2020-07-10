@@ -1,31 +1,42 @@
-/* body{
+body{
     background-color: rgb(109,134,206);
-} */
+}
 button{
     background-color: rgb(151,204,151);
-    /* padding: 15px; */
-    width: 100px;
+    width: 290px;
     height: 50px;
     border: 0ch;
 }
 .login_register_box
 {    
-
-    width: 300px;
-    height: 600px;
-    margin: 20%;
-    margin-left: 60%;
-    margin-top: 100px;
+   
+    position: relative;
+    top: 100px;
+    left: 50%;
+    border: 10px solid grey;
+    width: 600px;
+    height: 700px;
+    align-content: center;
     background-color: white;
     
 }
 .button_box
 {
-    margin: 100px;
-    /* margin-top: 200px; */
-    /* background-color: ; */
+    position: relative;
+    left: 25%;
+    top: 35%;
+    text-align: center;
+
+    max-width: 300px;
+    max-height: 200px;
+    /* border: 2px solid black; */
 }
-.register_button
-{
-    height: 30px;
+.rona_cards
+{   font-size: 60px;
+    position: relative;
+    top: 15%;
+    left: 25%;
+    max-width: 300px;
+    max-height: 200px;
+    border-bottom: 5px solid grey;
 }
