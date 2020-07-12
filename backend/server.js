@@ -25,7 +25,7 @@ let transporter = nodemailer.createTransport({
   });
 
 // TEST code, remove before we're finished
-
+/*
 let info = transporter.sendMail({
             from: '"Rona Cards" <ronacards@gmail.com', // sender address
             to: "ronacards@gmail.com", // list of receivers
@@ -33,7 +33,7 @@ let info = transporter.sendMail({
             text: 'testing email functionality',
         });
 console.log("Message sent: %s", info.messageId);
-
+*/
 const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
 );
@@ -51,3 +51,21 @@ app.use('/users', usersRouter);
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 });
+
+//Email verification
+app.put('/EmailVerification', async (req,res) =>
+{
+	//store incoming json
+	const {_id} = req.body;
+
+	//database connection
+	const db = client.db();
+
+	var query = {_id: ObjectId(_id}
+
+	var newValues = {$set:{Verified:true}};
+
+	var result = await db.collection('users').updateOne(query,newValues);
+
+	res.status(200).send('Account verified.');
+}
