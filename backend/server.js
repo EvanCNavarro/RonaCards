@@ -24,15 +24,15 @@ let transporter = nodemailer.createTransport({
     }
   });
 
-// TEST code, remove before we're finished
+// Put this code into register api to automatically send verification email
 /*
 let info = transporter.sendMail({
             from: '"Rona Cards" <ronacards@gmail.com', // sender address
-            to: "ronacards@gmail.com", // list of receivers
-            subject: 'testing email', // Subject line
-            text: 'testing email functionality',
+            to: email, // list of receivers
+            subject: 'Verify your email address with RonaCards', // Subject line
+            html: '<a href=\"http://localhost:5000/EmailVerification/${result.ops[0]._id}\">Click here to verify your email</a>',
         });
-console.log("Message sent: %s", info.messageId);
+res.status(200)send('Verification email sent to ' + email + '.');
 */
 const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
