@@ -3,15 +3,40 @@ import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./Dashboard.css";
 import { Tabs, Tab } from 'react-bootstrap-tabs';
 import contact_logo from './account_icon.png';
-import blueLips_present from '/graphics/icons/blueLips_present.png';
-export default function Dashboard() {
+import blueLips_present from './icons/blueLips_present.png';
+import blueLips_absent from './icons/blueLips_absent.png';
+import breathingDifficulty_present from './icons/breathingDifficulty_present.png';
+import breathingDifficulty_absent from './icons/breathingDifficulty_absent.png';
+import cold_present from './icons/cold_present.png';
+import cold_absent from './icons/cold_absent.png';
+import diahrrea_present from './icons/diahrrea_present.png';
+import diahrrea_absent from './icons/diahrrea_absent.png';
+import feet_present from './icons/feet_present.png';
+import feet_absent from './icons/feet_absent.png';
+import fever_present from './icons/fever_present.png';
+import fever_absent from './icons/fever_absent.png';
+import heartbeat_present from './icons/heartbeat_present.png';
+import heartbeat_absent from './icons/heartbeat_absent.png';
+import respiration_present from './icons/respiration_present.png';
+import respiration_absent from './icons/respiration_absent.png';
+import senseOfTaste_present from './icons/senseOfTaste_present.png';
+import senseOfTaste_absent from './icons/senseOfTaste_absent.png';export default function Dashboard() {
 
   const card_counter = 10; // connect to API
   const username = "Mudit"; // connect to API
   const email = "faizarali@corona.com"; // connect to API
-  const common_1 = blueLips_present;
-  const common_2 = blueLips_present;
-  const common_3 = blueLips_present;
+
+  const blueLips = blueLips_present;
+  const breathingDifficulty = blueLips_present;
+  const cold = blueLips_present;
+  const fever = fever_absent;
+  const feet = feet_present;
+  const diahrrea = diahrrea_absent;
+  const heartbeat = heartbeat_present;
+  const senseOfTaste = senseOfTaste_absent;
+  const respiration = respiration_absent;
+  // This is the list of symtoms and the icons to work with.
+
   // blueLips_present
   // blueLips_absent
   // breathingDifficulty_present
@@ -46,18 +71,23 @@ export default function Dashboard() {
         </Tab>
         <Tab class="topbar" label="Collection">
           <div>
-            <p>This is the Collection of your cards.</p>
+            <p>This is where you'll find your Collectibles</p>
             <div class="common_box">
-            <img class="common_1" src={common_1} alt="common_1" />
-            <img class="common_2" src={common_2} alt="common_1" />
-            <img class="common_3" src={common_3} alt="common_1" />
-
+            <img class="common_1" src={fever} alt="common_1" />
+            <img class="common_2" src={cold} alt="common_1" />
+            <img class="common_3" src={respiration} alt="common_1" />
             </div>
+
             <div class="uncommon_box">
-
+              <img class="uncommon_1" src={senseOfTaste} alt="uncommon_1" />
+              <img class="uncommon_2" src={diahrrea} alt="uncommon_1" />
+              <img class="uncommon_3" src={blueLips} alt="uncommon_1" />
             </div>
-            <div class="rare_box">
 
+            <div class="rare_box">
+              <img class="rare_1" src={feet} alt="common_1" />
+              <img class="rare_2" src={heartbeat} alt="common_1" />
+              <img class="rare_3" src={breathingDifficulty} alt="common_1" />
             </div>
 
 
