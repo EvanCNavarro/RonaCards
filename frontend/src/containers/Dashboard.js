@@ -37,7 +37,6 @@ import senseOfTaste_absent from './icons/senseOfTaste_absent.png';export default
   const senseOfTaste = senseOfTaste_absent;
   const respiration = respiration_absent;
   // This is the list of symtoms and the icons to work with.
-
   // blueLips_present
   // blueLips_absent
   // breathingDifficulty_present
@@ -71,21 +70,26 @@ import senseOfTaste_absent from './icons/senseOfTaste_absent.png';export default
 
         </Tab>
         <Tab class="topbar" label="Collection">
-          <div>
-            <p>This is where you'll find your Collectibles</p>
+          <div class="collection_tab"> 
+            <p class="description">: Your Collectibles :</p>
             <div class="common_box">
+              <p class="common">COMMON</p>
               <img class="common_1" src={fever} alt="common_1" />
               <img class="common_2" src={cold} alt="common_1" />
               <img class="common_3" src={breathingDifficulty} alt="common_1" />
             </div>
 
             <div class="uncommon_box">
+            <p class="common">UNCOMMON</p>
+
               <img class="uncommon_1" src={senseOfTaste} alt="uncommon_1" />
               <img class="uncommon_2" src={diahrrea} alt="uncommon_1" />
               <img class="uncommon_3" src={blueLips} alt="uncommon_1" />
             </div>
 
             <div class="rare_box">
+            <p class="common">RARE</p>
+
               <img class="rare_1" src={feet} alt="common_1" />
               <img class="rare_2" src={heartbeat} alt="common_1" />
               <img class="rare_3" src={respiration} alt="common_1" />
