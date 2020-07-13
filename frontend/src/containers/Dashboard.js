@@ -27,8 +27,8 @@ import senseOfTaste_absent from './icons/senseOfTaste_absent.png';export default
   const email = "faizarali@corona.com"; // connect to API
 
   const blueLips = blueLips_present;
-  const breathingDifficulty = blueLips_present;
-  const cold = blueLips_present;
+  const breathingDifficulty = breathingDifficulty_absent;
+  const cold = cold_absent;
   const fever = fever_absent;
   const feet = feet_present;
   const diahrrea = diahrrea_absent;
