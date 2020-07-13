@@ -3,13 +3,34 @@ import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./Dashboard.css";
 import { Tabs, Tab } from 'react-bootstrap-tabs';
 import contact_logo from './account_icon.png';
-
-
+import blueLips_present from '/graphics/icons/blueLips_present.png';
 export default function Dashboard() {
 
   const card_counter = 10; // connect to API
   const username = "Mudit"; // connect to API
   const email = "faizarali@corona.com"; // connect to API
+  const common_1 = blueLips_present;
+  const common_2 = blueLips_present;
+  const common_3 = blueLips_present;
+  // blueLips_present
+  // blueLips_absent
+  // breathingDifficulty_present
+  // breathingDifficulty_absent
+  // cold_absent
+  // cold_present
+  // fever_absent
+  // fever_present
+  // feet_absent
+  // feet_present
+  // diahrrea_absent
+  // diahrrea_present
+  // heartbeat_absent
+  // heartbeat_present
+  // senseOfTaste_absent
+  // senseOfTaste_present
+  // respiration_absent
+  // respiration_present
+
 
   return (
     <div class="topnav">
@@ -23,7 +44,27 @@ export default function Dashboard() {
           </div>
 
         </Tab>
-        <Tab class="topbar" label="Collection">Tab 2 content</Tab>
+        <Tab class="topbar" label="Collection">
+          <div>
+            <p>This is the Collection of your cards.</p>
+            <div class="common_box">
+            <img class="common_1" src={common_1} alt="common_1" />
+            <img class="common_2" src={common_2} alt="common_1" />
+            <img class="common_3" src={common_3} alt="common_1" />
+
+            </div>
+            <div class="uncommon_box">
+
+            </div>
+            <div class="rare_box">
+
+            </div>
+
+
+
+          </div>
+
+        </Tab>
 
 
 
