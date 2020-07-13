@@ -34,82 +34,111 @@
 /* These are related to the "Collection" Tab of the dashboard */
 .common_box
 {
-    position: relative;
-    border: 2px solid black;
+    position: absolute;
+    left: 5%;
+    border: 10px solid black;
     width: 35%;
     height: 30%;
-    /* background-color: green; */
+    background-color: rgb(124, 124, 124);
+    border-radius: 50px;
 }
 .common_1
 {
     /* border: 2px solid black; */
-    position: relative;
-    width: 33.3%;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 25%;
 }
 .common_2
 {
     /* border: 2px solid black; */
-    position: relative;
-    width: 33.3%;
+    position: absolute;
+    right:5%;
+    top: 5%;
+    width: 25%;
 }
 .common_3
 {
     /* border: 2px solid black; */
-    position: relative;
-    width: 33.3%;
+    position: absolute;
+    left: 37.5%;
+    bottom: 5%;
+    width: 25%;
 }
 .uncommon_box
 {
 
-    position: relative;
-    border: 2px solid black;
+    position: absolute;
+    right: 5%;
+    border: 10px solid black;
     width: 35%;
     height: 30%;
+    background-color: rgb(124, 124, 124);
+    border-radius: 50px;
+
+
+
 }
 .uncommon_1
 {
     /* border: 2px solid black; */
-    position: relative;
-    width: 33.3%;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 25%;
 }
 .uncommon_2
 {
     /* border: 2px solid black; */
-    position: relative;
-    width: 33.3%;
+    position: absolute;
+    right:5%;
+    top: 5%;
+    width: 25%;
 }
 .uncommon_3
 {
     /* border: 2px solid black; */
-    position: relative;
-    width: 33.3%;
+    position: absolute;
+    left: 37.5%;
+    bottom: 5%;
+    width: 25%;
 }
 .rare_box
 {
-    position: relative;
-    border: 2px solid black;
+    position: absolute;
+    left: 33%;
+    bottom: 10%; 
+    border: 10px solid black;
     width: 35%;
     height: 30%;
-    /* background-color: green; */
-    left: 60%;
+    background-color: rgb(124, 124, 124);
+    border-radius: 50px;
+
 }
 .rare_1
 {
     /* border: 2px solid black; */
-    position: relative;
-    width: 33.3%;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 25%;
 }
 .rare_2
 {
     /* border: 2px solid black; */
-    position: relative;
-    width: 33.3%;
+    position: absolute;
+    right:5%;
+    top: 5%;
+    width: 25%;
 }
 .rare_3
 {
     /* border: 2px solid black; */
-    position: relative;
-    width: 33.3%;
+    position: absolute;
+    left: 37.5%;
+    bottom: 5%;
+    width: 25%;
 }
 /* These are related to the "Account" Tab of the dashboard */
 .password_reset_button
