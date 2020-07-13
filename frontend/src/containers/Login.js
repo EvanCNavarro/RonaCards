@@ -51,9 +51,9 @@ export default function Login() {
             type="password"
           />
         </FormGroup>
-        <Button block bsSize="large" disabled={!validateForm()} type="submit">
-          <p class="login_click">Login</p>
-        </Button>
+        <button class="login_click" type="submit">
+          Login
+        </button>
       </form>
     </div>
   );

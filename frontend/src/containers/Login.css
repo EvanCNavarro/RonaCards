@@ -38,16 +38,24 @@
   }
   .login_click
   {
-    font-weight: bold;
-    font-size: 30px;
+    
+    background-color: rgb(151,204,151);
+    width: 100%;
+    border: 4px solid rgb(151,204,151);
+    border-radius: 5px;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
   }
+  .login_click:hover
+  {
+    background-color: white;
+  }
+
   .user_fill
   {
-    font-size: 40px;
+    font-size: 250%;
   }
   .credentials
   {
-background-color: aqua;  }
- 
-
-}
+    background-color: aqua;  }
+  }

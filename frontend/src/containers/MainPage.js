@@ -4,7 +4,7 @@ import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./MainPage.css";
 import Login from "./Login.js";
 import Register from "./Register.js";
-import main_logo from './main_logo.png';
+import main_logo from './main_logo.svg';
 
 
 
@@ -21,15 +21,18 @@ export default function MainPage()
     ReactDOM.render(<Register />, document.getElementById("root"));
   }
   return(
+
     <div>
       <img class="main_logo" src={main_logo} alt="Mascot Logo" />
+
       <div class="login_register_box">
+
         <p class="rona_cards">Rona Cards</p>
         <div class ="button_box">
-          <div><button class="login_button" onClick={loginCaller}>Login</button></div>
+          <div><button class="button_login_register" onClick={loginCaller}>Login</button></div>
           <br></br>
           <br></br>
-          <div><button class="register_button" onClick={registerCaller}>Register  </button></div>
+          <div><button class="button_login_register" onClick={registerCaller}>Register  </button></div>
           <p>(New User)</p>
         </div>
       </div>
