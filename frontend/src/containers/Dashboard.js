@@ -26,10 +26,11 @@ import senseOfTaste_absent from './icons/senseOfTaste_absent.png';export default
   const username = "Mudit"; // connect to API
   const email = "faizarali@corona.com"; // connect to API
 
+  // these are depending on the API calls, but as of now are randomly assigned. 
   const blueLips = blueLips_present;
   const breathingDifficulty = breathingDifficulty_absent;
   const cold = cold_absent;
-  const fever = fever_absent;
+  const fever = fever_present;
   const feet = feet_present;
   const diahrrea = diahrrea_absent;
   const heartbeat = heartbeat_present;
@@ -73,9 +74,9 @@ import senseOfTaste_absent from './icons/senseOfTaste_absent.png';export default
           <div>
             <p>This is where you'll find your Collectibles</p>
             <div class="common_box">
-            <img class="common_1" src={fever} alt="common_1" />
-            <img class="common_2" src={cold} alt="common_1" />
-            <img class="common_3" src={respiration} alt="common_1" />
+              <img class="common_1" src={fever} alt="common_1" />
+              <img class="common_2" src={cold} alt="common_1" />
+              <img class="common_3" src={breathingDifficulty} alt="common_1" />
             </div>
 
             <div class="uncommon_box">
@@ -87,7 +88,7 @@ import senseOfTaste_absent from './icons/senseOfTaste_absent.png';export default
             <div class="rare_box">
               <img class="rare_1" src={feet} alt="common_1" />
               <img class="rare_2" src={heartbeat} alt="common_1" />
-              <img class="rare_3" src={breathingDifficulty} alt="common_1" />
+              <img class="rare_3" src={respiration} alt="common_1" />
             </div>
 
 
