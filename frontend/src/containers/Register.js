@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./Register.css";
 import MainPage from "./MainPage.js";
+import back_png from './back_png.png';
 
 
 export default function Login() {
@@ -20,14 +21,15 @@ export default function Login() {
   function handleSubmit(event) {
     event.preventDefault();
   }
-  function mainPage_caller()
-  {
+  function mainPage_caller() {
     ReactDOM.render(<MainPage />, document.getElementById("root"));
   }
 
   return (
     <div className="Register">
-      <button onClick={mainPage_caller}>Back</button>
+      <button class="back_button" onClick={mainPage_caller}>
+        <img class="back_png" src={back_png} alt="Mascot Logo" />
+      </button>
       <form onSubmit={handleSubmit}>
         {/* <FormGroup controlId="FirstName" bsSize="large">
           <FormLabel>First Name</FormLabel>
@@ -39,7 +41,7 @@ export default function Login() {
           />
         </FormGroup> */}
         <FormGroup controlId="UserName" bsSize="large">
-          <FormLabel>Username</FormLabel>
+          <FormLabel class="user_fill">Username</FormLabel>
           <FormControl
             autoFocus
             type="UserName"
@@ -48,7 +50,7 @@ export default function Login() {
           />
         </FormGroup>
         <FormGroup controlId="email" bsSize="large">
-          <FormLabel>Email</FormLabel>
+          <FormLabel class="user_fill">Email</FormLabel>
           <FormControl
             autoFocus
             type="email"
@@ -57,16 +59,17 @@ export default function Login() {
           />
         </FormGroup>
         <FormGroup controlId="password" bsSize="large">
-          <FormLabel>Password</FormLabel>
+          <FormLabel class="user_fill" ><p>Password</p></FormLabel>
           <FormControl
+            class="credentials"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type="password"
           />
         </FormGroup>
-        <Button block bsSize="large" disabled={!validateForm()} type="submit">
-          Register
-        </Button>
+        <button class="register_click" type="submit">
+          Login
+        </button>
       </form>
     </div>
   );
