@@ -31,15 +31,6 @@ export default function Login() {
         <img class="back_png" src={back_png} alt="Mascot Logo" />
       </button>
       <form onSubmit={handleSubmit}>
-        {/* <FormGroup controlId="FirstName" bsSize="large">
-          <FormLabel>First Name</FormLabel>
-          <FormControl
-            autoFocus
-            type="FirstName"
-            value={FirstName}
-            onChange={(e) => setFirstName(e.target.value)}
-          />
-        </FormGroup> */}
         <FormGroup controlId="UserName" bsSize="large">
           <FormLabel class="user_fill">Username</FormLabel>
           <FormControl
@@ -68,7 +59,7 @@ export default function Login() {
           />
         </FormGroup>
         <button class="register_click" type="submit">
-          Login
+          Register
         </button>
       </form>
     </div>
