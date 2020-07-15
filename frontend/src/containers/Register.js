@@ -7,7 +7,7 @@ import MainPage from "./MainPage.js";
 import back_png from './back_png.png';
 
 
-export default function Login() {
+export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   //   const [FirstName, setFirstName] = useState("");
