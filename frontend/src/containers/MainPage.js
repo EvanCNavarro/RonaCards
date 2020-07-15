@@ -10,17 +10,14 @@ import main_logo from './main_logo.svg';
 
 
 
-export default function MainPage()
-{
-  function loginCaller()
-  {
+export default function MainPage() {
+  function loginCaller() {
     ReactDOM.render(<Login />, document.getElementById("root"));
   }
-  function registerCaller()
-  {
+  function registerCaller() {
     ReactDOM.render(<Register />, document.getElementById("root"));
   }
-  return(
+  return (
 
     <div>
       <img class="main_logo" src={main_logo} alt="Mascot Logo" />
@@ -28,12 +25,13 @@ export default function MainPage()
       <div class="login_register_box">
 
         <p class="rona_cards">Rona Cards</p>
-        <div class ="button_box">
+        <div class="button_box">
           <div><button class="button_login_register" onClick={loginCaller}>Login</button></div>
           <br></br>
           <br></br>
           <div><button class="button_login_register" onClick={registerCaller}>Register  </button></div>
           <p>(New User)</p>
+          <p>Forgot password?</p>
         </div>
       </div>
     </div>
