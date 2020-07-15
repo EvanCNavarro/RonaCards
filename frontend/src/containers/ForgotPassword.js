@@ -26,7 +26,7 @@ export default function Login() {
     }
 
     return (
-        <div className="Register">
+        <div className="ForgotPassword">
             <button class="back_button" onClick={mainPage_caller}>
                 <img class="back_png" src={back_png} alt="Mascot Logo" />
             </button>
@@ -49,7 +49,7 @@ export default function Login() {
                         type="password"
                     />
                 </FormGroup>
-                <button class="register_click" type="submit">
+                <button class="forgotPassword_click" type="submit">
                     Update Password
         </button>
             </form>
