@@ -4,8 +4,8 @@ import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./MainPage.css";
 import Login from "./Login.js";
 import Register from "./Register.js";
+import ForgotPassword from "./ForgotPassword.js";
 import main_logo from './main_logo.svg';
-
 
 
 
@@ -16,6 +16,9 @@ export default function MainPage() {
   }
   function registerCaller() {
     ReactDOM.render(<Register />, document.getElementById("root"));
+  }
+  function forgotPasswordCaller() {
+    ReactDOM.render(<ForgotPassword />, document.getElementById("root"));
   }
   return (
 
@@ -31,7 +34,7 @@ export default function MainPage() {
           <br></br>
           <div><button class="button_login_register" onClick={registerCaller}>Register  </button></div>
           <p>(New User)</p>
-          <button class="forgot_password" onClick={registerCaller}>Forgot password?</button>
+          <button class="forgot_password" onClick={forgotPasswordCaller}>Forgot password?</button>
         </div>
       </div>
     </div>
