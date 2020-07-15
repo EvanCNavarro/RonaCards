@@ -31,7 +31,7 @@ export default function MainPage() {
           <br></br>
           <div><button class="button_login_register" onClick={registerCaller}>Register  </button></div>
           <p>(New User)</p>
-          <p>Forgot password?</p>
+          <button class="forgot_password" onClick={registerCaller}>Forgot password?</button>
         </div>
       </div>
     </div>

@@ -53,9 +53,12 @@ body{
     text-align: center;
     width: 80%;
     border-bottom: 2px solid black;
+}
 
-    
-
-    
-   
+.forgot_password
+{
+    font-family: 'Courier New', Courier, monospace ;
+    background-color: white;
+    text-decoration: underline;
+    border: white;
 }
