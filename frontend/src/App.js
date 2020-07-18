@@ -17,7 +17,7 @@ export default function App() {
   return (
     <>
       <BrowserRouter>
-        <UserContext.Provider value={userData, setUserData}>
+        <UserContext.Provider value={{ userData, setUserData }}>
           <Switch>
             <Route exact path="/" component={MainPage} />
             {/* <Route  path="/dashboard" component={Dashboard} /> */}
