@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-// import App from './App';
+import App from './App';
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.css";
 import Login from "./containers/Login";
@@ -11,7 +11,7 @@ import Dashboard from "./containers/Dashboard";
 import MainPage from "./containers/MainPage";
 
 
-ReactDOM.render(<MainPage />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
 
 
 

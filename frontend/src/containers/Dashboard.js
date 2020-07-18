@@ -32,7 +32,7 @@ import senseOfTaste_absent from './icons/senseOfTaste_absent.png';export default
   const cold = cold_absent;
   const fever = fever_present;
   const feet = feet_present;
-  const diahrrea = diahrrea_absent;
+  const diahrrea = diahrrea_present;
   const heartbeat = heartbeat_present;
   const senseOfTaste = senseOfTaste_absent;
   const respiration = respiration_absent;

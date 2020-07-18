@@ -5,13 +5,13 @@ import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./Register.css";
 import MainPage from "./MainPage.js";
 import back_png from './back_png.png';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  //   const [FirstName, setFirstName] = useState("");
-  //   const [LastName, setLastName] = useState("");
   const [UserName, setUserName] = useState("");
 
   function validateForm() {
@@ -27,9 +27,9 @@ export default function Register() {
 
   return (
     <div className="Register">
-      <button class="back_button" onClick={mainPage_caller}>
+      <Link to="/"class="back_button" >
         <img class="back_png" src={back_png} alt="Mascot Logo" />
-      </button>
+      </Link>
       <form onSubmit={handleSubmit}>
         <FormGroup controlId="UserName" bsSize="large">
           <FormLabel class="user_fill">Username</FormLabel>

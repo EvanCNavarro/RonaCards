@@ -5,6 +5,7 @@ import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./ForgotPassword.css";
 import MainPage from "./MainPage.js";
 import back_png from './back_png.png';
+import {Link} from "react-router-dom";
 
 
 export default function ForgotPassword() {
@@ -21,15 +22,13 @@ export default function ForgotPassword() {
     function handleSubmit(event) {
         event.preventDefault();
     }
-    function mainPage_caller() {
-        ReactDOM.render(<MainPage />, document.getElementById("root"));
-    }
+  
 
     return (
         <div className="ForgotPassword">
-            <button class="back_button" onClick={mainPage_caller}>
+            <Link to="/" class="back_button" >
                 <img class="back_png" src={back_png} alt="Mascot Logo" />
-            </button>
+            </Link>
             <form onSubmit={handleSubmit}>
                 <FormGroup controlId="email" bsSize="large">
                     <FormLabel class="user_fill">Email</FormLabel>

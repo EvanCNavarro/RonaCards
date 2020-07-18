@@ -6,6 +6,7 @@ import Login from "./Login.js";
 import Register from "./Register.js";
 import ForgotPassword from "./ForgotPassword.js";
 import main_logo from './main_logo.svg';
+import {Link} from "react-router-dom";
 
 
 
@@ -29,12 +30,12 @@ export default function MainPage() {
 
         <p class="rona_cards">Rona Cards</p>
         <div class="button_box">
-          <div><button class="button_login_register" onClick={loginCaller}>Login</button></div>
+          <div><Link to="/login" class="button_login_register" >Login</Link></div>
           <br></br>
           <br></br>
-          <div><button class="button_login_register" onClick={registerCaller}>Register  </button></div>
+          <div><Link to="/register" class="button_login_register" >Register </Link></div>
           <p>(New User)</p>
-          <button class="forgot_password" onClick={forgotPasswordCaller}>Forgot password?</button>
+          <Link to="/passwordReset"class="forgot_password" >Forgot password?</Link>
         </div>
       </div>
     </div>
