@@ -1,5 +1,19 @@
 const db = require("../models");
 const User = db.users;
+//Email transporter
+let transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true, // true for 465, false for other ports
+  auth: {
+    user: 'ronacards@gmail.com', // made a new email for this
+    pass: 'COP4331_G6', //didn't want to set up an email server, or use my real email
+  },
+  tls:{
+    rejectUnauthorized:false
+  }
+});
+
 // Create and Save a new User
 exports.create = (req, res) => {
 	// Validate request
