@@ -1,4 +1,4 @@
-import ReactReact, { useState, userEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Axios from "axios";
 import Dashboard from "./containers/Dashboard";
@@ -27,8 +27,17 @@ export default function App() {
         null,
         { headers: { "x-auth-token": token } }
       );
-      console.log(tokenRes.data);
-    }
+      if (tokenRes.data) {
+        const userRes = await Axios.get("http://rona.cards:4000/users/",
+          {
+            headers: { "x-auth-token": token },
+          });
+        setUserData({
+          token,
+          user: userRes.data,
+        })
+      }
+    };
 
     checkLoggedIn();
   }, []);
