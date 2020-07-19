@@ -47,7 +47,7 @@ router.post("/register", async (req, res) => {
                         subject: 'Verify your email address with RonaCards', // Subject line
                         html: '<a href=\"http://localhost:4000/EmailVerification/${savedUser.ops[0]._id}\">Click here to verify your email</a>',
                 });
-                res.status(200)send('Verification email sent to ' + email + '.');
+                res.status(200).send('Verification email sent to ' + email + '.');
                 res.json(savedUser);
         } catch (err) {
                 res.status(500).json({ error: err });
