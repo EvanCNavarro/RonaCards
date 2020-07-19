@@ -1,29 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import ReactDOM from "react-dom";
 
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./Login.css";
 import MainPage from "./MainPage.js";
 import back_png from './back_png.png';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import UserContext from "../context/UserContext";
+import Axios from "axios";
 
 
 export default function Login() {
   //const [email, setEmail] = useState("");
-  const [UserName, setUserName] = useState("");
+  const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
-  function validateForm() 
-  {
-    return UserName.length > 0 && password.length > 0;
+  const { setUserData } = useContext(UserContext);
+  const history = useHistory();
+
+  const submit = async (e) => {
+    e.preventDefault();
+    const loginUser = { username, password };
+    const loginRes = await Axios.post(
+      "http://rona.cards:4000/users/login", loginUser);
+    setUserData({
+      token: loginRes.data.token,
+      user: loginRes.data.user,
+    });
+    localStorage.setItem("auth-token", loginRes.data.token);
+    history.push("/");
+  };
+
+  function validateForm() {
+    return username.length > 0 && password.length > 0;
   }
 
-  function handleSubmit(event) 
-  {
+  function handleSubmit(event) {
     event.preventDefault();
   }
-  function mainPage_caller()
-  {
+  function mainPage_caller() {
     ReactDOM.render(<MainPage />, document.getElementById("root"));
   }
 
@@ -31,15 +47,15 @@ export default function Login() {
   return (
     <div className="Login">
       <Link to="/" class="back_button" >
-      <img class="back_png" src={back_png} alt="Mascot Logo" />
+        <img class="back_png" src={back_png} alt="Mascot Logo" />
       </Link>
       <form onSubmit={handleSubmit}>
-        <FormGroup controlId="UserName" bsSize="large">
+        <FormGroup controlId="username" bsSize="large">
           <FormLabel class="user_fill">Username</FormLabel>
           <FormControl
             autoFocus
-            type="UserName"
-            value={UserName}
+            type="username"
+            value={username}
             onChange={(e) => setUserName(e.target.value)}
           />
         </FormGroup>
