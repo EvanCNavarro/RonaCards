@@ -16,6 +16,9 @@ export default function Login() {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
+  const { setUserData } = useContext(UserContext);
+  const history = useHistory();
+
   function validateForm() {
     return username.length > 0 && password.length > 0;
   }

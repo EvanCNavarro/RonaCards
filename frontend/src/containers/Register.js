@@ -37,7 +37,7 @@ export default function Register() {
       user: loginRes.data.user,
     });
     localStorage.setItem("auth-token", loginRes.data.token);
-    history.pushState("/");
+    history.push("/");
   }
 
   function validateForm() {
