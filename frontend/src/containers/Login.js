@@ -19,6 +19,19 @@ export default function Login() {
   const { setUserData } = useContext(UserContext);
   const history = useHistory();
 
+  const submit = async (e) => {
+    e.preventDefault();
+    const loginUser = { username, password };
+    const loginRes = await Axios.post(
+      "http://rona.cards:4000/users/login", loginUser);
+    setUserData({
+      token: loginRes.data.token,
+      user: loginRes.data.user,
+    });
+    localStorage.setItem("auth-token", loginRes.data.token);
+    history.push("/");
+  };
+
   function validateForm() {
     return username.length > 0 && password.length > 0;
   }

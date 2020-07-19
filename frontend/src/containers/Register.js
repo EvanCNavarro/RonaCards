@@ -38,7 +38,7 @@ export default function Register() {
     });
     localStorage.setItem("auth-token", loginRes.data.token);
     history.push("/");
-  }
+  };
 
   function validateForm() {
     return username.length > 0 && email.length > 0 && password.length > 0;
