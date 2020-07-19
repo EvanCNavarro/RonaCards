@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.not h1 {
+	background-color: #e2f0fa;
+}
+
+a {
+	color: #2199df;
+	text-decoration: unset;
+}
+
+ul {
+	margin-left: 1.5rem;
+	list-style: none;
+}
+
+button,
+input[type="submit"] {
+	border: none;
+	background: none;
+	color: unset;
+	cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+	margin: 1em 0;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+}
+
+.page {
+	padding: 1rem;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 900px;
+}
+
+#header {
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #509ac4;
+}
+
+#header .title {
+	margin: 0;
+	padding: 0 1rem;
+	color:#000000;
+	background-color: transparent;
+}
+
+#header .auth-options {
+	height: 100%;
+	display: flex;
+}
+
+#header .auth-options button {
+	padding: 0 1rem;
+	background-color: #70b0d5;
+	font-size: 1.1rem;
+}
+
+#header .auth-options button:hover {
+	background-color: #417795;
+}
+
+.form label,
+.form input {
+	display: block;
+}
+
+.form input {
+	margin-bottom: 1rem
+}
+
+.form label {
+	margin-bottom: 0.5rem;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+	width: 100%;
+	padding: 0.5rem;
+	border: 1px solid;
+	border-radius: 7px;
+	background-color: #f0f0f0;
+	font-size: 1.2rem;
+}
+
+.form input:focus {
+	border: 1px solid #268ee4;
+	box-shadow: inset 0px 0px 10px rgba(38, 142, 228, 0.5);
+	outline: none;
+}
+.form input[type="submit"] {
+	padding: 0.4rem 0.5rem;
+	font-size: 1.2rem;
+	border-radius: 7px;
+	border: 1px solid;
+	background-color: #c8ecb7;
+}
+
+.error-notice {
+	margin: 1rem 0;
+	padding: 0.5rem;
+	border: 1px solid;
+	border-radius: 7px;
+	background-color: #f8d6d6;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.error-notice button {
+	border: 1px solid;
+	background-color: #f9e5e5;
+	width: 25px;
+	height: 25px;
+	border-radius: 7px;
+}
