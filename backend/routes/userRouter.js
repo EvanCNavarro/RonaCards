@@ -3,6 +3,22 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const auth = require("../middleware/auth");
 const User = require("../models/userModel");
+const nodemailer = require('nodemailer');
+
+//mail transporter
+let transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, // true for 465, false for other ports
+    auth: {
+      user: 'ronacards@gmail.com', // made a new email for this
+      pass: 'COP4331_G6', //didn't want to set up an email server, or use my real email
+    },
+    tls:{
+      rejectUnauthorized:false
+    }
+  });
+
 
 router.post("/register", async (req, res) => {
         try {
@@ -25,6 +41,12 @@ router.post("/register", async (req, res) => {
                         password: passwordHash,
                 });
                 const savedUser = await newUser.save();
+                let info = transporter.sendMail({
+                        from: '"Rona Cards" <ronacards@gmail.com>', // sender address
+                        to: email, // list of receivers
+                        subject: 'Verify your email address with RonaCards', // Subject line
+                        html: '<a href=\"http://localhost:4000/EmailVerification?savedUser._id}\">Click here to verify your email</a>',
+                });
                 res.json(savedUser);
         } catch (err) {
                 res.status(500).json({ error: err });
