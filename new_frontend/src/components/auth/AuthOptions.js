@@ -16,14 +16,16 @@ export default function AuthOptions() {
 		});
 		localStorage.setItem("auth-token", "");
 	};
-	//const collection = () => history.push("/collection");
+	const collection = () => history.push("/collection");
 
 
 	return (
 		<nav className="auth-options">
 		{userData.user ? (
-				//<button onClick = { collection } >Collection</button>
+			<>
+				<button onClick = { collection } >Collection</button>
 				<button onClick = { logout } >Log out</button>
+			</>
 			) : (
 			<>
 				<button onClick = { register } >Register</button>
