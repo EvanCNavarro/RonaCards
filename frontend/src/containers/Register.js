@@ -56,7 +56,7 @@ export default function Register() {
       <Link to="/" class="back_button" >
         <img class="back_png" src={back_png} alt="Mascot Logo" />
       </Link>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={submit}>
         <FormGroup controlId="username" bsSize="large">
           <FormLabel class="user_fill">Username</FormLabel>
           <FormControl
