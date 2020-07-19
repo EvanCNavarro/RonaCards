@@ -44,9 +44,9 @@ export default function Register() {
     return username.length > 0 && email.length > 0 && password.length > 0;
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  // }
   function mainPage_caller() {
     ReactDOM.render(<MainPage />, document.getElementById("root"));
   }
