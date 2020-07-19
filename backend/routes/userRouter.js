@@ -47,7 +47,7 @@ router.post("/register", async (req, res) => {
                         from: '"Rona Cards" <ronacards@gmail.com>', // sender address
                         to: email, // list of receivers
                         subject: 'Verify your email address with RonaCards', // Subject line
-                        html: '<a href=\"http://localhost:4000/EmailVerification/${registerID}\">Click here to verify your email</a>',
+                        html: '<a href=\"http://localhost:4000/EmailVerification/${registerID[0].id}\">Click here to verify your email</a>',
                 });
                 res.status(200).send('Verification email sent to ' + email + '.');
                 res.json(savedUser);
