@@ -22,15 +22,15 @@ import senseOfTaste_absent from '../../images/icons/senseOfTaste_absent.png';
 
 export default function Collection() {
 
-	const blueLips = blueLips_absent;
-	const breathingDifficulty = breathingDifficulty_absent;
-	const cold = cold_absent;
-	const fever = fever_absent;
-	const feet = feet_absent;
-	const diahrrea = diahrrea_absent;
-	const heartbeat = heartbeat_absent;
-	const senseOfTaste = senseOfTaste_absent;
-	const respiration = respiration_absent;
+	var blueLips = blueLips_absent;
+	var breathingDifficulty = breathingDifficulty_absent;
+	var cold = cold_absent;
+	var fever = fever_absent;
+	var feet = feet_absent;
+	var diahrrea = diahrrea_absent;
+	var heartbeat = heartbeat_absent;
+	var senseOfTaste = senseOfTaste_absent;
+	var respiration = respiration_absent;
 
     const [user, setUsername] = useState("");
 	var [card1, setCard1] = useState('');
@@ -84,19 +84,29 @@ export default function Collection() {
 		collection[counter] = collection[counter].toString();
 	}
 		// only a test
-		if(collection[6] === 'true')
+		if(collection[1] === 'true')
 		{
-			blueLips = blueLips_present;
+			fever = fever_present;
 		}
 
-		if(collection[6] === 'true')
+		if(collection[2] === 'true')
 		{
-			blueLips = blueLips_present;
+			cold = cold_present;
 		}
 
-		if(collection[6] === 'true')
+		if(collection[3] === 'true')
 		{
-			blueLips = blueLips_present;
+			breathingDifficulty = breathingDifficulty_present;
+		}
+        
+		if(collection[4] === 'true')
+		{
+			senseOfTaste = senseOfTaste_present;
+		}
+        
+		if(collection[5] === 'true')
+		{
+			diahrrea = diahrrea_present;
 		}
         
 		if(collection[6] === 'true')
@@ -104,29 +114,19 @@ export default function Collection() {
 			blueLips = blueLips_present;
 		}
         
-		if(collection[6] === 'true')
+		if(collection[7] === 'true')
 		{
-			blueLips = blueLips_present;
+			feet = feet_present;
 		}
         
-		if(collection[6] === 'true')
+		if(collection[8] === 'true')
 		{
-			blueLips = blueLips_present;
+			heartbeat = heartbeat_present;
 		}
         
-		if(collection[6] === 'true')
+		if(collection[9] === 'true')
 		{
-			blueLips = blueLips_present;
-		}
-        
-		if(collection[6] === 'true')
-		{
-			blueLips = blueLips_present;
-		}
-        
-		if(collection[6] === 'true')
-		{
-			blueLips = blueLips_present;
+			respiration = respiration_present;
 		}
         
         return (
