@@ -28,7 +28,7 @@ export default function Login() {
 	};
 
 	return ( <div className = "page">
-			<h2>Reset Your Password</h2>
+			<h2>Reset Your Password:</h2>
 			{error && (
 				<ErrorNotice message={error} clearError={() => setError(undefined)} />
 			)}
@@ -40,7 +40,7 @@ export default function Login() {
 					onChange={(e) => setEmail(e.target.value)}
 				/>
 
-				<input type="submit" value="Send Reset Link to Email" />
+				<input type="submit" value="Send Reset Link" />
 			</form>
 		</div>
 	);

@@ -29,7 +29,7 @@ export default function VerifyEmail() {
 	return ( <div className = "page">
 			<div className = "notification">
 				<h2>Click the button below to finish your verification.</h2>
-				<h4>( Afterwards, you'll be brought to our login page )</h4>
+				<h4>( Afterwards, you'll be brought to our login page. )</h4>
 				{error && (
 					<ErrorNotice message={error} clearError={() => setError(undefined)} />
 				)}
