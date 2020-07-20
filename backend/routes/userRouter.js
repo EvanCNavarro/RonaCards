@@ -24,7 +24,7 @@ router.post("/register", async (req, res) => {
         try {
                 const { username, email, password } = req.body;
                 if (!username || !email || !password)
-                        return res.status(400).json({ msg: "Empty field(s)." });
+                        return res.status(400).json({ msg: "Fields cannot be empty!" });
                 if (password.length < 5)
                         return res.status(400).json({ msg: "Passwords must be at least 5 characters long." });
                 const existingEmail = await User.findOne({ email: email });
@@ -86,6 +86,8 @@ router.post("/login", async (req, res) => {
                 const user = await User.findOne({ username : username });
                 if (!user)
                         return res.status(400).json({ msg: "Username does not exist!" });
+		if (!user.verified)
+			return res.status(400).json({ msg: "You must verify your email before being able to log in. Check your inbox!" });
                 const isMatch = await bcrypt.compare(password, user.password);
                 if (!isMatch)
                         return res.status(400).json({ msg: "Invalid credentials." });
