@@ -140,3 +140,115 @@ body {
 	height: 25px;
 	border-radius: 7px;
 }
+.common_box
+{
+    position: absolute;
+    left: 5%;
+    border: 10px solid black;
+    width: 35%;
+    height: 30%;
+    background-color: rgb(124, 124, 124);
+    border-radius: 50px;
+}
+.common
+{
+    position: absolute;
+    left: 25%;
+    top: 20%;
+    width: 50%;
+    font-size: 60%;
+    font-weight: bolder;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.common_1
+{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 25%;
+}
+.common_2
+{
+    position: absolute;
+    right:5%;
+    top: 5%;
+    width: 25%;
+}
+.common_3
+{
+    position: absolute;
+    left: 37.5%;
+    bottom: 5%;
+    width: 25%;
+}
+
+.uncommon_box
+{
+
+    position: absolute;
+    right: 5%;
+    border: 10px solid black;
+    width: 35%;
+    height: 30%;
+    background-color: rgb(124, 124, 124);
+    border-radius: 50px;
+
+
+
+}
+.uncommon_1
+{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 25%;
+}
+.uncommon_2
+{
+    position: absolute;
+    right:5%;
+    top: 5%;
+    width: 25%;
+}
+.uncommon_3
+{
+    position: absolute;
+    left: 37.5%;
+    bottom: 5%;
+    width: 25%;
+}
+.rare_box
+{
+    position: absolute;
+    left: 33%;
+    bottom: 10%; 
+    border: 10px solid black;
+    width: 35%;
+    height: 30%;
+    background-color: rgb(124, 124, 124);
+    border-radius: 50px;
+
+}
+.rare_1
+{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 25%;
+}
+.rare_2
+{
+    position: absolute;
+    right:5%;
+    top: 5%;
+    width: 25%;
+}
+.rare_3
+{
+    position: absolute;
+    left: 37.5%;
+    bottom: 5%;
+    width: 25%;
+}

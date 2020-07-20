@@ -1,13 +1,44 @@
 import React, { useState } from "react";
 
+
+import blueLips_present from '../../images/icons/blueLips_present.png';
+import blueLips_absent from '../../images/icons/blueLips_absent.png';
+import breathingDifficulty_present from '../../images/icons/breathingDifficulty_present.png';
+import breathingDifficulty_absent from '../../images/icons/breathingDifficulty_absent.png';
+import cold_present from '../../images/icons/cold_present.png';
+import cold_absent from '../../images/icons/cold_absent.png';
+import diahrrea_present from '../../images/icons/diahrrea_present.png';
+import diahrrea_absent from '../../images/icons/diahrrea_absent.png';
+import feet_present from '../../images/icons/feet_present.png';
+import feet_absent from '../../images/icons/feet_absent.png';
+import fever_present from '../../images/icons/fever_present.png';
+import fever_absent from '../../images/icons/fever_absent.png';
+import heartbeat_present from '../../images/icons/heartbeat_present.png';
+import heartbeat_absent from '../../images/icons/heartbeat_absent.png';
+import respiration_present from '../../images/icons/respiration_present.png';
+import respiration_absent from '../../images/icons/respiration_absent.png';
+import senseOfTaste_present from '../../images/icons/senseOfTaste_present.png';
+import senseOfTaste_absent from '../../images/icons/senseOfTaste_absent.png';
+
 export default function Collection() {
-        const [user, setUsername] = useState("");
+
+	const blueLips = blueLips_absent;
+	const breathingDifficulty = breathingDifficulty_absent;
+	const cold = cold_absent;
+	const fever = fever_absent;
+	const feet = feet_absent;
+	const diahrrea = diahrrea_absent;
+	const heartbeat = heartbeat_absent;
+	const senseOfTaste = senseOfTaste_absent;
+	const respiration = respiration_absent;
+
+    const [user, setUsername] = useState("");
 	var [card1, setCard1] = useState('');
 	var [card2, setCard2] = useState('');
 	var [card3, setCard3] = useState('');
 	var [card4, setCard4] = useState('');
-        var [card5, setCard5] = useState('');
-        var [card6, setCard6] = useState('');
+	var [card5, setCard5] = useState('');
+	var [card6, setCard6] = useState('');
 	var [card7, setCard7] = useState('');
 	var [card8, setCard8] = useState('');
 	var [card9, setCard9] = useState('');
@@ -52,7 +83,12 @@ export default function Collection() {
 	for (counter = 0; counter < 10; counter++) {
 		collection[counter] = collection[counter].toString();
 	}
-
+		// only a test
+		
+		if(collection[0] == true)
+		{
+			blueLips = blueLips_present;
+		}
         return (
                 <div className = "page">
 			<div className = "greeting">
@@ -60,16 +96,28 @@ export default function Collection() {
 				<h2>Welcome to your <b>Rona Cards</b> collection:</h2>
 			</div>
 			<div className = "collection">
-				<h4>Card 1: { collection[0] }</h4>
-				<h4>Card 2: { collection[1] }</h4>
-				<h4>Card 3: { collection[2] }</h4>
-				<h4>Card 4: { collection[3] }</h4>
-				<h4>Card 5: { collection[4] }</h4>
-				<h4>Card 6: { collection[5] }</h4>
-				<h4>Card 7: { collection[6] }</h4>
-				<h4>Card 8: { collection[7] }</h4>
-				<h4>Card 9: { collection[8] }</h4>
-				<h4>Card 10: { collection[9] }</h4>
+			<div class="common_box">
+              <p class="common">COMMON</p>
+              <img class="common_1" src={fever} alt="common_1" />
+              <img class="common_2" src={cold} alt="common_1" />
+              <img class="common_3" src={breathingDifficulty} alt="common_1" />
+            </div>
+
+            <div class="uncommon_box">
+            <p class="common">UNCOMMON</p>
+
+              <img class="uncommon_1" src={senseOfTaste} alt="uncommon_1" />
+              <img class="uncommon_2" src={diahrrea} alt="uncommon_1" />
+              <img class="uncommon_3" src={blueLips} alt="uncommon_1" />
+            </div>
+
+            <div class="rare_box">
+            <p class="common">RARE</p>
+
+              <img class="rare_1" src={feet} alt="common_1" />
+              <img class="rare_2" src={heartbeat} alt="common_1" />
+              <img class="rare_3" src={respiration} alt="common_1" />
+            </div>
 			</div>
                 </div>
         );
