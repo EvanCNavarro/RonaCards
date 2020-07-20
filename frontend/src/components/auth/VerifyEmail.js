@@ -20,7 +20,7 @@ export default function VerifyEmail() {
 				"http://rona.cards:4000/users/verify",
 				userEmail
 			);
-			history.push("/login");
+			history.push("/");
 		} catch (err) {
 			err.response.data.msg && setError(err.response.data.msg);
 		}

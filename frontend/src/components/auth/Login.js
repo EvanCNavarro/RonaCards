@@ -33,7 +33,7 @@ export default function Login() {
 		}
 	};
 
-	const reset = () => history.push("/reset");
+	const requestLink = () => history.push("/send");
 
 	return (
 		<div className = "page">
@@ -57,7 +57,7 @@ export default function Login() {
 				/>
 
 				<input type="submit" value="Log in" />
-				<button onClick = { reset } ><input type="reset" value="Reset Password" /></button>
+				<button onClick = { requestLink } ><input type="reset" value="Forgot Your Password?" /></button>
 			</form>
 		</div>
 	);

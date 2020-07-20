@@ -4,7 +4,7 @@ import UserContext from "../../context/UserContext";
 import Axios from "axios";
 import ErrorNotice from "../misc/ErrorNotice";
 
-export default function Login() {
+export default function ResetPassword() {
 	const [email, setEmail] = useState();
 	const [error, setError] = useState();
 
@@ -28,7 +28,7 @@ export default function Login() {
 	};
 
 	return ( <div className = "page">
-			<h2>Reset Your Password:</h2>
+			<h2>Get Link to Reset Password:</h2>
 			{error && (
 				<ErrorNotice message={error} clearError={() => setError(undefined)} />
 			)}

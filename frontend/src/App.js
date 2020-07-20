@@ -10,7 +10,7 @@ import Home from "./components/pages/Home";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import Collection from "./components/auth/Collection";
-import ResetPassword from "./components/auth/ResetPassword";
+import RequestReset from "./components/auth/RequestReset";
 import EmailSent from "./components/pages/EmailSent";
 import VerifyEmail from "./components/auth/VerifyEmail";
 
@@ -58,7 +58,7 @@ export default function App() {
 							<Route path = "/login" component={Login} />
 							<Route path = "/register" component={Register} />
 							<Route path = "/collection" component={Collection} />
-							<Route path = "/reset" component={ResetPassword} />
+							<Route path = "/send" component={RequestReset} />
 							<Route path = "/sent" component={EmailSent} />
 							<Route path = "/verify" component={VerifyEmail} />
 						</Switch>
