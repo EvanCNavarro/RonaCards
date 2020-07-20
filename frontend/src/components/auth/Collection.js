@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 import blueLips_present from '../../images/icons/blueLips_present.png';
 import blueLips_absent from '../../images/icons/blueLips_absent.png';
 import breathingDifficulty_present from '../../images/icons/breathingDifficulty_present.png';
