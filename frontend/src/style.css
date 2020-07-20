@@ -170,9 +170,9 @@ body {
 {
     position: absolute;
     left: 25%;
-    top: 20%;
+    top: 0%;
     width: 50%;
-    font-size: 150%;
+    font-size: 100%;
     font-weight: bolder;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
@@ -272,6 +272,6 @@ body {
 {
 	position: relative;
 	right: 25%;
-	font-family: 'Courier New', Courier, monospace;
+	/* font-family: 'Courier New', Courier, monospace; */
 
 }
