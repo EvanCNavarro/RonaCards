@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 import blueLips_present from '../../images/icons/blueLips_present.png';
 import blueLips_absent from '../../images/icons/blueLips_absent.png';
 import breathingDifficulty_present from '../../images/icons/breathingDifficulty_present.png';
@@ -22,15 +21,15 @@ import senseOfTaste_absent from '../../images/icons/senseOfTaste_absent.png';
 
 export default function Collection() {
 
-	const blueLips = blueLips_absent;
-	const breathingDifficulty = breathingDifficulty_absent;
-	const cold = cold_absent;
-	const fever = fever_absent;
-	const feet = feet_absent;
-	const diahrrea = diahrrea_absent;
-	const heartbeat = heartbeat_absent;
-	const senseOfTaste = senseOfTaste_absent;
-	const respiration = respiration_absent;
+	var blueLips = blueLips_absent;
+	var breathingDifficulty = breathingDifficulty_absent;
+	var cold = cold_absent;
+	var fever = fever_absent;
+	var feet = feet_absent;
+	var diahrrea = diahrrea_absent;
+	var heartbeat = heartbeat_absent;
+	var senseOfTaste = senseOfTaste_absent;
+	var respiration = respiration_absent;
 
     const [user, setUsername] = useState("");
 	var [card1, setCard1] = useState('');
