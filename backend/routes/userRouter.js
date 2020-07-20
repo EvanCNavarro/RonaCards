@@ -63,7 +63,8 @@ router.post("/reset", async (req, res) => {
 		if (!existingEmail)
 			return res.status(400).json({ msg: "This email does not exist.." });
 		const token = jwt.sign({ id: existingEmail._id }, process.env.JWT_SECRET);
-		const resetURL = "http://rona.cards:3000/reset?_id=" + existingEmail._id;                                                          let info = transporter.sendMail({
+		const resetURL = "http://rona.cards:3000/reset?_id=" + existingEmail._id;
+		let resetsender = transporter.sendMail({
                         from: '"Rona Cards" <ronacards@gmail.com>', // sender address
                         to: email, // list of receivers
                         subject: 'Reset your password with RonaCards', // Subject line
