@@ -41,9 +41,7 @@ router.post("/register", async (req, res) => {
                         password: passwordHash,
                 });
                 const savedUser = await newUser.save();
-		console.log(savedUser._id);
-		const registerURL = "http://localhost:4000/EmailVerification/" + savedUser._id;
-		console.log(registerURL);
+		const registerURL = "http://localhost:4000/EmailVerification?_id=" + savedUser._id;
                 let info = transporter.sendMail({
                         from: '"Rona Cards" <ronacards@gmail.com>', // sender address
                         to: email, // list of receivers
