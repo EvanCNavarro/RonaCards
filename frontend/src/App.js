@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from "react"
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Axios from "axios";
+
+import UserContext from "./context/UserContext";
+
 import Header from "./components/layout/Header";
+
 import Home from "./components/pages/Home";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import Collection from "./components/auth/Collection";
-import UserContext from "./context/UserContext";
+import ResetPassword from "./components/auth/ResetPassword";
+import EmailSent from "./components/pages/EmailSent";
+
 
 import "./style.css";
 
@@ -52,6 +58,8 @@ export default function App() {
 							<Route path = "/login" component={Login} />
 							<Route path = "/register" component={Register} />
 							<Route path = "/collection" component={Collection} />
+							<Route path = "/reset" component={ResetPassword} />
+							<Route path = "/sent" component={EmailSent} />
 						</Switch>
 					</div>
 				</UserContext.Provider>

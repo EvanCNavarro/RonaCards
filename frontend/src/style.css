@@ -21,7 +21,8 @@ ul {
 }
 
 button,
-input[type="submit"] {
+input[type="submit"],
+input[type="reset"] {
 	border: none;
 	background: none;
 	color: unset;
@@ -110,6 +111,14 @@ body {
 	border-radius: 7px;
 	border: 1px solid;
 	background-color: #c8ecb7;
+}
+
+.form input[type="reset"] {
+        padding: 0.4rem 0.5rem;
+        font-size: 1rem;
+        border-radius: 7px;
+        border: 1px solid;
+        background-color: #EE9082;
 }
 
 .error-notice {

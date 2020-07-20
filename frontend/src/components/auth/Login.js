@@ -33,6 +33,8 @@ export default function Login() {
 		}
 	};
 
+	const reset = () => history.push("/reset");
+
 	return (
 		<div className = "page">
 			<h2>Log in</h2>
@@ -55,6 +57,7 @@ export default function Login() {
 				/>
 
 				<input type="submit" value="Log in" />
+				<button onClick = { reset } ><input type="reset" value="Reset Password" /></button>
 			</form>
 		</div>
 	);

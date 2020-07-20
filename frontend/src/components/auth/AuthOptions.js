@@ -18,8 +18,6 @@ export default function AuthOptions() {
 		localStorage.setItem("auth-token", "");
 		history.push("/");
 	};
-	console.log({setUserData});
-
 
 	return (
 		<nav className="auth-options">
