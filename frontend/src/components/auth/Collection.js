@@ -129,10 +129,10 @@ export default function Collection() {
 		}
         
         return (
-                <div className = "page">
+            <div className = "page">
 			<div className = "greeting">
 				<h1>Hey { user }!</h1>
-				<h2>Welcome to your <b>Rona Cards</b> collection:</h2>
+				<h2>Welcome To Your <b>Rona Cards</b> Collection:</h2>
 			</div>
 			<div className = "collection">
 			<div class="common_box">
