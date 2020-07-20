@@ -161,7 +161,7 @@ body {
     position: absolute;
     left: 5%;
     border: 10px solid black;
-    width: 35%;
+    width: 30%;
     height: 30%;
     background-color: rgb(124, 124, 124);
     border-radius: 50px;
@@ -170,9 +170,9 @@ body {
 {
     position: absolute;
     left: 25%;
-    top: 20%;
+    top: 0%;
     width: 50%;
-    font-size: 60%;
+    font-size: 100%;
     font-weight: bolder;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
@@ -206,7 +206,7 @@ body {
     position: absolute;
     right: 5%;
     border: 10px solid black;
-    width: 35%;
+    width: 30%;
     height: 30%;
     background-color: rgb(124, 124, 124);
     border-radius: 50px;
@@ -238,10 +238,10 @@ body {
 .rare_box
 {
     position: absolute;
-    left: 33%;
-    bottom: 10%; 
+    left: 35%;
+    bottom: 5%; 
     border: 10px solid black;
-    width: 35%;
+    width: 30%;
     height: 30%;
     background-color: rgb(124, 124, 124);
     border-radius: 50px;
@@ -267,4 +267,11 @@ body {
     left: 37.5%;
     bottom: 5%;
     width: 25%;
+}
+.greeting
+{
+	position: relative;
+	right: 25%;
+	/* font-family: 'Courier New', Courier, monospace; */
+
 }
