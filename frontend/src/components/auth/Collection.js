@@ -84,11 +84,51 @@ export default function Collection() {
 		collection[counter] = collection[counter].toString();
 	}
 		// only a test
-		
-		if(collection[0] == true)
+		if(collection[6] === 'true')
 		{
 			blueLips = blueLips_present;
 		}
+
+		if(collection[6] === 'true')
+		{
+			blueLips = blueLips_present;
+		}
+
+		if(collection[6] === 'true')
+		{
+			blueLips = blueLips_present;
+		}
+        
+		if(collection[6] === 'true')
+		{
+			blueLips = blueLips_present;
+		}
+        
+		if(collection[6] === 'true')
+		{
+			blueLips = blueLips_present;
+		}
+        
+		if(collection[6] === 'true')
+		{
+			blueLips = blueLips_present;
+		}
+        
+		if(collection[6] === 'true')
+		{
+			blueLips = blueLips_present;
+		}
+        
+		if(collection[6] === 'true')
+		{
+			blueLips = blueLips_present;
+		}
+        
+		if(collection[6] === 'true')
+		{
+			blueLips = blueLips_present;
+		}
+        
         return (
                 <div className = "page">
 			<div className = "greeting">

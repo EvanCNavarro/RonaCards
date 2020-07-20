@@ -3,4 +3,5 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import Collection from "./components/auth/Collection";
 
-ReactDOM.render(<Collection />, document.querySelector("#root"));
+// Mudit has changed this to collection, this should be rendering App instead. ------ Mudit.
+ReactDOM.render(<App />, document.querySelector("#root"));
