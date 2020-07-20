@@ -56,11 +56,33 @@ router.post("/register", async (req, res) => {
         }
 });
 
+router.post("/reset", async (req, res) => {
+	try {
+		const { email } = req.body;
+		if (!email)
+                        return res.status(400).json({ msg: "Email cannot be empty!" });
+		const existingEmail = await User.findOne({ email: email });
+		if (!existingEmail)
+			return res.status(400).json({ msg: "This email does not exist.." });
+		const token = jwt.sign({ id: existingEmail._id }, process.env.JWT_SECRET);
+		res.json({
+			token,
+			user: {
+				id: existingEmail._id,
+				username: existingEmail.username,
+				email: existingEmail.email,
+			},
+		});
+	} catch (err) {
+                res.status(500).json({ error: err.message });
+        }
+});
+
 router.post("/login", async (req, res) => {
         try {
                 const { username, password } = req.body;
                 if (!username || !password)
-                        return res.status(400).json({ msg: "Empty fields(s)." });
+                        return res.status(400).json({ msg: "Fields cannot be empty!" });
                 const user = await User.findOne({ username : username });
                 if (!user)
                         return res.status(400).json({ msg: "Username does not exist!" });
@@ -132,22 +154,22 @@ router.get("/", auth, async (req, res) => {
 	try {
 		res.json({
 			id: user._id,
-                username: user.username,
-                email: user.email,
-                card1: user.card1,
-                card2: user.card2,
-                card3: user.card3,
-                card4: user.card4,
-                card5: user.card5,
-                card6: user.card6,
-                card7: user.card7,
-                card8: user.card8,
-                card9: user.card9,
-             	card10: user.card10
-        });
-		console.log(user);
-	        } catch (err) {
-                res.status(500).json({ error: err.message });
-        }
+			username: user.username,
+			email: user.email,
+			card1: user.card1,
+			card2: user.card2,
+			card3: user.card3,
+			card4: user.card4,
+			card5: user.card5,
+			card6: user.card6,
+			card7: user.card7,
+			card8: user.card8,
+			card9: user.card9,
+			card10: user.card10
+		});
+	} catch (err) {
+		res.status(500).json({ error: err.message });
+	}
 });
+
 module.exports = router;
