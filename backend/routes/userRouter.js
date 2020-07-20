@@ -129,8 +129,9 @@ router.post("/tokenIsValid", async (req, res) => {
 
 router.get("/", auth, async (req, res) => {
         const user = await User.findById(req.user);
-        res.json({
-                id: user._id,
+	try {
+		res.json({
+			id: user._id,
                 username: user.username,
                 email: user.email,
                 card1: user.card1,
@@ -142,7 +143,11 @@ router.get("/", auth, async (req, res) => {
                 card7: user.card7,
                 card8: user.card8,
                 card9: user.card9,
-                card10: user.card10
+             	card10: user.card10
         });
+		console.log(user);
+	        } catch (err) {
+                res.status(500).json({ error: err.message });
+        }
 });
 module.exports = router;

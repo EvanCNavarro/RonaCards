@@ -1,18 +1,21 @@
-import React, { useState, useContext } from "react";
-import { useHistory } from "react-router-dom";
-import UserContext from "../../context/UserContext";
-import Axios from "axios";
+import React from "react";
 
 export default function Collection() {
-	const [username, setUsername] = useState();
-	const [password, setPassword] = useState();
-	const { setUserData } = useContext(UserContext);
-	const history = useHistory();
-
-
-	return (
-		<div className = "page">
-			<h2>Log in</h2>
-		</div>
-	);
+        var userData;
+        fetch('http://www.rona.cards:4000/users/', {
+                        method: "GET",
+                        headers: {
+                                "x-auth-token": localStorage.getItem("auth-token")
+                        }
+                })
+                .then(res => res.json())
+                .then(data => userData = data)
+                .then(() => console.log(userData));
+        return (
+                <div className = "page">
+                        <h2>Collection</h2>
+                        <h2> -break- </h2>
+                        <h2> -break- </h2>
+                </div>
+        );
 }
