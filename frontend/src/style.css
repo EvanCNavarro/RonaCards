@@ -6,10 +6,6 @@
 	box-sizing: border-box;
 }
 
-.not h1 {
-	background-color: #e2f0fa;
-}
-
 a {
 	color: #2199df;
 	text-decoration: unset;
@@ -22,11 +18,13 @@ ul {
 
 button,
 input[type="submit"],
-input[type="reset"] {
+input[type="reset"],
+input[type="verify"] {
 	border: none;
 	background: none;
 	color: unset;
 	cursor: pointer;
+	text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol {
@@ -76,6 +74,11 @@ body {
 	background-color: #417795;
 }
 
+.notification {
+	text-align: center;
+}
+
+
 .form label,
 .form input {
 	display: block;
@@ -100,12 +103,14 @@ body {
 	font-size: 1.2rem;
 }
 
+
 .form input:focus {
 	border: 1px solid #268ee4;
 	box-shadow: inset 0px 0px 10px rgba(38, 142, 228, 0.5);
 	outline: none;
 }
-.form input[type="submit"] {
+.form input[type="submit"],
+.form input[type="verify"] {
 	padding: 0.4rem 0.5rem;
 	font-size: 1.2rem;
 	border-radius: 7px;

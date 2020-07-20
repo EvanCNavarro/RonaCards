@@ -12,7 +12,7 @@ import Register from "./components/auth/Register";
 import Collection from "./components/auth/Collection";
 import ResetPassword from "./components/auth/ResetPassword";
 import EmailSent from "./components/pages/EmailSent";
-
+import VerifyEmail from "./components/auth/VerifyEmail";
 
 import "./style.css";
 
@@ -60,6 +60,7 @@ export default function App() {
 							<Route path = "/collection" component={Collection} />
 							<Route path = "/reset" component={ResetPassword} />
 							<Route path = "/sent" component={EmailSent} />
+							<Route path = "/verify" component={VerifyEmail} />
 						</Switch>
 					</div>
 				</UserContext.Provider>
