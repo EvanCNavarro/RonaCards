@@ -15,6 +15,6 @@ it('My Test Case', () => {
 
 test('renders learn react link', () => {
     const { getByText } = render(<App />);
-    const linkElement = getByText(/Forgot Your Password/i);
+    const linkElement = getByText(Register);
     expect(linkElement).toBeInTheDocument();
 });
