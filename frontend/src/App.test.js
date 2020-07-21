@@ -13,7 +13,7 @@ it('My Test Case', () => {
 });
 
 it('renders without crashing_2', () => {
-    const form = document.createElement('form');
-    ReactDOM.render(<App />, form);
-    ReactDOM.unmountComponentAtNode(form);
+    const Switch = document.createElement('Switch');
+    ReactDOM.render(<App />, Switch);
+    ReactDOM.unmountComponentAtNode(Switch);
 });
