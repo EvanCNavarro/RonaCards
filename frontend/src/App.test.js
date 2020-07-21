@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { render } from '@testing-library/react';
+import { shallow } from 'enzyme';
 import App from './App';
 
 it('renders without crashing', () => {
@@ -13,8 +13,6 @@ it('My Test Case', () => {
     expect(true).toEqual(true);
 });
 
-test('renders learn react link', () => {
-    const { getByText } = render(<App />);
-    const linkElement = getByText(Register);
-    expect(linkElement).toBeInTheDocument();
-});
+// it('Component', () => {
+//     expect(wrapper.find('Button')).;
+// });
