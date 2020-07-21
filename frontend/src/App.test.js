@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-const { MongoDB } = require('mongodb');
-require('custom-env').env('dev');
+// const { MongoDB } = require('mongodb');
+// require('custom-env').env('dev');
 
 it('My First Test Case', () => {
     expect(true).toEqual(true);
