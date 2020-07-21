@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+// Importing inage icons
 import blueLips_present from '../../images/icons/blueLips_present.png';
 import blueLips_absent from '../../images/icons/blueLips_absent.png';
 import breathingDifficulty_present from '../../images/icons/breathingDifficulty_present.png';
@@ -18,6 +18,18 @@ import respiration_present from '../../images/icons/respiration_present.png';
 import respiration_absent from '../../images/icons/respiration_absent.png';
 import senseOfTaste_present from '../../images/icons/senseOfTaste_present.png';
 import senseOfTaste_absent from '../../images/icons/senseOfTaste_absent.png';
+// importing image cards
+import card1_fever from '../../images/cards/card1_fever.png';
+import card2_nose from '../../images/cards/card2_nose.png';
+import card3_breath from '../../images/cards/card3_breath.png';
+import card4_taste from '../../images/cards/card4_taste.png';
+import card5_diarrhea from '../../images/cards/card5_diarrhea.png';
+import card6_blue from '../../images/cards/card6_blue.png';
+import card7_toe from '../../images/cards/card7_toe.png';
+import card8_heart from '../../images/cards/card8_heart.png';
+import card9_oxygen from '../../images/cards/card9_oxygen.png';
+import card10_cure from '../../images/cards/card10_cure.png';
+
 
 export default function Collection() {
 
@@ -138,8 +150,32 @@ export default function Collection() {
 			<div class="common_box">
               <p class="common">COMMON</p>
               <img class="common_1" src={fever} alt="common_1" />
+			  <div class="HoverBox1">
+			 	 <img class="Card" src={card1_fever} alt="common_1" />
+				  <div class="card_text">
+					<p class="card_heading">FEVER</p>
+					<p class="card_details"> LEVEL 1</p>
+				  </div>
+				 
+			  </div>
               <img class="common_2" src={cold} alt="common_1" />
+			  <div class="HoverBox2">
+			 	 <img class="Card" src={card2_nose} alt="common_1" />
+				  <div class="card_text">
+					<p class="card_heading">FEVER</p>
+					<p class="card_details"> LEVEL 1</p>
+				  </div>
+				 
+			  </div>
               <img class="common_3" src={breathingDifficulty} alt="common_1" />
+			  {/* <div class="HoverBox">
+			 	 <img class="Card" src={card1_fever} alt="common_1" />
+				  <div class="card_text">
+					<p class="card_heading">FEVER</p>
+					<p class="card_details"> LEVEL 1</p>
+				  </div>
+				 
+			  </div> */}
             </div>
 
             <div class="uncommon_box">

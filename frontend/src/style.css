@@ -158,6 +158,7 @@ body {
 }
 .common_box
 {
+	visibility: visible;
     position: absolute;
     left: 5%;
     border: 10px solid black;
@@ -175,7 +176,7 @@ body {
     font-size: 100%;
     font-weight: bolder;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
 
 }
 .common_1
@@ -185,6 +186,69 @@ body {
     top: 5%;
     width: 25%;
 }
+.HoverBox1
+{
+	border: 5px solid lightgray;
+	border-radius: 10px;
+	font: inherit;
+	visibility: hidden;
+	max-width: 100%;
+	min-height: 200%;
+	/* position: relative; */
+	left: 0;
+	right: 0;
+	background-color: lightgray;
+	opacity: 97%;
+	z-index: -1;
+} 
+.HoverBox2
+{
+	border: 5px solid lightgray;
+	border-radius: 10px;
+	font: inherit;
+	visibility: hidden;
+	max-width: 100%;
+	min-height: 200%;
+	/* position: relative; */
+	left: 0;
+	right: 0;
+	background-color: lightgray;
+	opacity: 97%;
+	z-index: -1;
+} 
+.Card
+{
+	position: absolute;
+	left: 10%;
+	top: 20%;
+	max-width: 40%;
+	border: 5px solid white;
+	border-radius: 10px;
+	
+}
+.card_heading
+{
+	font-weight: bolder;
+	font-size: 30px;
+	text-decoration: underline;
+}
+.card_text
+{
+	position: absolute;
+	left: 60%;
+	top: 20%;
+}
+
+
+.common_1:hover ~ .HoverBox1 
+{
+	position: relative;
+	left: 30%;
+	bottom: 40%;
+	visibility: visible;
+	z-index: 1;
+}
+
 .common_2
 {
     position: absolute;
@@ -192,6 +256,15 @@ body {
     top: 5%;
     width: 25%;
 }
+.common_2:hover ~ .HoverBox2 
+{
+	position: relative;
+	left: 100%;
+	bottom: 250%;
+	visibility: visible;
+	z-index: 1;
+}
+
 .common_3
 {
     position: absolute;
@@ -271,7 +344,9 @@ body {
 .greeting
 {
 	position: relative;
-	right: 25%;
+	text-align: center;
+	/* left: 10%; */
+	/* right: 25%; */
 	/* font-family: 'Courier New', Courier, monospace; */
 
 }
