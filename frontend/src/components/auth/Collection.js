@@ -155,6 +155,8 @@ export default function Collection() {
 				  <div class="card_text">
 					<p class="card_heading">FEVER</p>
 					<p class="card_details"> LEVEL 1</p>
+					<p class="card_details"> You're Burning Up!</p>
+
 				  </div>
 				 
 			  </div>
@@ -162,36 +164,87 @@ export default function Collection() {
 			  <div class="HoverBox2">
 			 	 <img class="Card" src={card2_nose} alt="common_1" />
 				  <div class="card_text">
-					<p class="card_heading">FEVER</p>
-					<p class="card_details"> LEVEL 1</p>
+					<p class="card_heading">Runny Nose</p>
+					<p class="card_details"> LEVEL 2</p>
+					<p class="card_details"> That's a lot of mucus!</p>
+
 				  </div>
 				 
 			  </div>
               <img class="common_3" src={breathingDifficulty} alt="common_1" />
-			  {/* <div class="HoverBox">
-			 	 <img class="Card" src={card1_fever} alt="common_1" />
+			  <div class="HoverBox3">
+			 	 <img class="Card" src={card3_breath} alt="common_1" />
 				  <div class="card_text">
-					<p class="card_heading">FEVER</p>
-					<p class="card_details"> LEVEL 1</p>
+					<p class="card_heading">Shortness of Breath</p>
+					<p class="card_details"> LEVEL 3</p>
+					<p class="card_details"> Your lungs are struggling!</p>
+
 				  </div>
 				 
-			  </div> */}
+			  </div>
             </div>
 
             <div class="uncommon_box">
             <p class="common">UNCOMMON</p>
-
               <img class="uncommon_1" src={senseOfTaste} alt="uncommon_1" />
+			  	<div class="HoverBox4">
+			 	 <img class="Card" src={card4_taste} alt="common_1" />
+				  <div class="card_text">
+					<p class="card_heading">Loss of Taste</p>
+					<p class="card_details"> LEVEL 4</p>
+					<p class="card_details"> Don't Bother Licking..</p>
+				  </div>
+				</div>
               <img class="uncommon_2" src={diahrrea} alt="uncommon_1" />
+			  <div class="HoverBox5">
+			 	 <img class="Card" src={card5_diarrhea} alt="common_1" />
+				  <div class="card_text">
+					<p class="card_heading">Diarrhea</p>
+					<p class="card_details"> LEVEL 5</p>
+					<p class="card_details"> The toilet is your new mansion!</p>
+				  </div>
+				</div>
               <img class="uncommon_3" src={blueLips} alt="uncommon_1" />
+			  <div class="HoverBox6">
+			 	 <img class="Card" src={card6_blue} alt="common_1" />
+				  <div class="card_text">
+					<p class="card_heading">Blue Lips</p>
+					<p class="card_details"> LEVEL 6</p>
+					<p class="card_details"> That's not lipstick, is it?</p>
+				  </div>
+				</div>
             </div>
 
             <div class="rare_box">
             <p class="common">RARE</p>
 
               <img class="rare_1" src={feet} alt="common_1" />
+			  <div class="HoverBox7">
+			 	 <img class="Card" src={card7_toe} alt="common_1" />
+				  <div class="card_text">
+					<p class="card_heading">COVID Toe</p>
+					<p class="card_details"> LEVEL 7</p>
+					<p class="card_details"> Toe-tally not normal!</p>
+				  </div>
+				</div>
               <img class="rare_2" src={heartbeat} alt="common_1" />
+			  <div class="HoverBox8">
+			 	 <img class="Card" src={card8_heart} alt="common_1" />
+				  <div class="card_text">
+					<p class="card_heading">Cardiovascular Distress</p>
+					<p class="card_details"> LEVEL 8</p>
+					<p class="card_details"> Your heart is struggling!</p>
+				  </div>
+				</div>
               <img class="rare_3" src={respiration} alt="common_1" />
+			  <div class="HoverBox9">
+			 	 <img class="Card" src={card9_oxygen} alt="common_1" />
+				  <div class="card_text">
+					<p class="card_heading">Happy Hypoxia</p>
+					<p class="card_details"> LEVEL 9</p>
+					<p class="card_details"> Your breathing feels.. normal?</p>
+				  </div>
+				</div>
             </div>
 			</div>
                 </div>

@@ -156,6 +156,29 @@ body {
 	height: 25px;
 	border-radius: 7px;
 }
+.Card
+{
+	position: absolute;
+	left: 10%;
+	top: 20%;
+	max-width: 40%;
+	border: 5px solid white;
+	border-radius: 10px;
+	
+}
+.card_heading
+{
+	font-weight: bolder;
+	font-size: 20px;
+	text-decoration: underline;
+}
+.card_text
+{
+	max-width: 100px;
+	position: absolute;
+	left: 55%;
+	top: 20%;
+}
 .common_box
 {
 	visibility: visible;
@@ -186,7 +209,7 @@ body {
     top: 5%;
     width: 25%;
 }
-.HoverBox1
+.HoverBox1 
 {
 	border: 5px solid lightgray;
 	border-radius: 10px;
@@ -201,6 +224,17 @@ body {
 	opacity: 97%;
 	z-index: -1;
 } 
+
+
+.common_1:hover ~ .HoverBox1 
+{
+	position: relative;
+	left: 30%;
+	bottom: 40%;
+	visibility: visible;
+	z-index: 1;
+}
+
 .HoverBox2
 {
 	border: 5px solid lightgray;
@@ -215,46 +249,28 @@ body {
 	background-color: lightgray;
 	opacity: 97%;
 	z-index: -1;
-} 
-.Card
-{
-	position: absolute;
-	left: 10%;
-	top: 20%;
-	max-width: 40%;
-	border: 5px solid white;
-	border-radius: 10px;
-	
 }
-.card_heading
-{
-	font-weight: bolder;
-	font-size: 30px;
-	text-decoration: underline;
-}
-.card_text
-{
-	position: absolute;
-	left: 60%;
-	top: 20%;
-}
-
-
-.common_1:hover ~ .HoverBox1 
-{
-	position: relative;
-	left: 30%;
-	bottom: 40%;
-	visibility: visible;
-	z-index: 1;
-}
-
 .common_2
 {
     position: absolute;
     right:5%;
     top: 5%;
     width: 25%;
+}
+.HoverBox3
+{
+	border: 5px solid lightgray;
+	border-radius: 10px;
+	font: inherit;
+	visibility: hidden;
+	min-width: 100%;
+	min-height: 200%;
+	/* position: relative; */
+	left: 0;
+	right: 0;
+	background-color: lightgray;
+	opacity: 97%;
+	z-index: -1;
 }
 .common_2:hover ~ .HoverBox2 
 {
@@ -272,7 +288,14 @@ body {
     bottom: 5%;
     width: 25%;
 }
-
+.common_3:hover ~ .HoverBox3
+{
+	position: relative;
+	left: 60%;
+	bottom: 350%;
+	visibility: visible;
+	z-index: 1;
+}
 .uncommon_box
 {
 
@@ -294,6 +317,29 @@ body {
     top: 5%;
     width: 25%;
 }
+.HoverBox4
+{
+	border: 5px solid lightgray;
+	border-radius: 10px;
+	font: inherit;
+	visibility: hidden;
+	min-width: 100%;
+	min-height: 200%;
+	/* position: relative; */
+	left: 0;
+	right: 0;
+	background-color: lightgray;
+	opacity: 97%;
+	z-index: -1;
+}
+.uncommon_1:hover ~ .HoverBox4
+{
+	position: relative;
+	left: -100%;
+	top:0%;
+	visibility: visible;
+	z-index: 1;
+}
 .uncommon_2
 {
     position: absolute;
@@ -301,12 +347,58 @@ body {
     top: 5%;
     width: 25%;
 }
+.HoverBox5
+{
+	border: 5px solid lightgray;
+	border-radius: 10px;
+	font: inherit;
+	visibility: hidden;
+	min-width: 100%;
+	min-height: 200%;
+	/* position: relative; */
+	left: 0;
+	right: 0;
+	background-color: lightgray;
+	opacity: 97%;
+	z-index: -1;
+}
+.uncommon_2:hover ~ .HoverBox5
+{
+	position: relative;
+	left: -30%;
+	top:-180%;
+	visibility: visible;
+	z-index: 1;
+}
 .uncommon_3
 {
     position: absolute;
     left: 37.5%;
     bottom: 5%;
     width: 25%;
+}
+.HoverBox6
+{
+	border: 5px solid lightgray;
+	border-radius: 10px;
+	font: inherit;
+	visibility: hidden;
+	min-width: 100%;
+	min-height: 200%;
+	/* position: relative; */
+	left: 0;
+	right: 0;
+	background-color: lightgray;
+	opacity: 97%;
+	z-index: -1;
+}
+.uncommon_3:hover ~ .HoverBox6
+{
+	position: relative;
+	left: -60%;
+	top:-350%;
+	visibility: visible;
+	z-index: 1;
 }
 .rare_box
 {
@@ -327,6 +419,29 @@ body {
     top: 5%;
     width: 25%;
 }
+.HoverBox7
+{
+	border: 5px solid lightgray;
+	border-radius: 10px;
+	font: inherit;
+	visibility: hidden;
+	min-width: 100%;
+	min-height: 200%;
+	/* position: relative; */
+	left: 0;
+	right: 0;
+	background-color: lightgray;
+	opacity: 97%;
+	z-index: -1;
+}
+.rare_1:hover ~ .HoverBox7
+{
+	position: relative;
+	left: -100%;
+	top:-100%;
+	visibility: visible;
+	z-index: 1;
+}
 .rare_2
 {
     position: absolute;
@@ -334,12 +449,58 @@ body {
     top: 5%;
     width: 25%;
 }
+.HoverBox8
+{
+	border: 5px solid lightgray;
+	border-radius: 10px;
+	font: inherit;
+	visibility: hidden;
+	min-width: 100%;
+	min-height: 200%;
+	/* position: relative; */
+	left: 0;
+	right: 0;
+	background-color: lightgray;
+	opacity: 97%;
+	z-index: -1;
+}
+.rare_2:hover ~ .HoverBox8
+{
+	position: relative;
+	left: 100%;
+	top:-300%;
+	visibility: visible;
+	z-index: 1;
+}
 .rare_3
 {
     position: absolute;
     left: 37.5%;
     bottom: 5%;
     width: 25%;
+}
+.HoverBox9
+{
+	border: 5px solid lightgray;
+	border-radius: 10px;
+	font: inherit;
+	visibility: hidden;
+	min-width: 100%;
+	min-height: 200%;
+	/* position: relative; */
+	left: 0;
+	right: 0;
+	background-color: lightgray;
+	opacity: 97%;
+	z-index: -1;
+}
+.rare_3:hover ~ .HoverBox9
+{
+	position: relative;
+	left: 0%;
+	top:-550%;
+	visibility: visible;
+	z-index: 1;
 }
 .greeting
 {
