@@ -4,7 +4,7 @@ import UserContext from "../../context/UserContext";
 import Axios from "axios";
 import ErrorNotice from "../misc/ErrorNotice";
 
-export default function ResetPassword() {
+export default function RequestReset() {
 	const [email, setEmail] = useState();
 	const [error, setError] = useState();
 

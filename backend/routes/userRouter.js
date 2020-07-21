@@ -83,21 +83,65 @@ router.post("/reset", async (req, res) => {
         }
 });
 
+router.put("/newPassword", async (req, res) => {
+	const { id, password } = req.body;
+	const salt = await bcrypt.genSalt();
+        const passwordHash = await bcrypt.hash(password, salt);
+        User.findByIdAndUpdate(id, { password : passwordHash }, { useFindAndModify: false })
+                .then(data => {
+                        if (!data) {
+                                res.status(404).send({
+                                        message: `Cannot update User with id=${id}. Maybe User was not found!`
+                                });
+                        } else res.send({ message: "User was updated successfully." });
+                })
+                .catch(err => {
+                        res.status(500).send({
+                                message: "Error updating User with id=" + id
+                        });
+                });
+});
+
+
+router.put("/verify", async (req, res) => {
+        console.log("API HIT");
+        const { id } = req.body;
+        console.log(req.body);
+        User.findByIdAndUpdate(id, { verified : true }, { useFindAndModify: false })
+                .then(data => {
+                        if (!data) {
+                                res.status(404).send({
+                                        message: `Cannot update User with id=${id}. Maybe User was not found!`
+                                });
+                        } else res.send({ message: "User was updated successfully." });
+                })
+                .catch(err => {
+                        res.status(500).send({
+                                message: "Error updating User with id=" + id
+                        });
+                });
+});
+
+
 router.post("/login", async (req, res) => {
         try {
                 const { username, password } = req.body;
-                if (!username || !password)
-                        return res.status(400).json({ msg: "Fields cannot be empty!" });
+                if (!username || !password) {
+			return res.status(400).json({ msg: "Fields cannot be empty!" });
+		}
                 const user = await User.findOne({ username : username });
-                if (!user)
-                        return res.status(400).json({ msg: "Username does not exist!" });
-		if (!user.verified)
-			return res.status(400).json({ msg: "You must verify your email before being able to log in. Check your inbox!" });
+                if (!user) {
+                        return res.status(404).json({ msg: "Username does not exist!" });
+		}
+		if (!user.verified) {
+			return res.status(401).json({ msg: "Verify email before logging in." });
+		}
                 const isMatch = await bcrypt.compare(password, user.password);
-                if (!isMatch)
-                        return res.status(400).json({ msg: "Invalid credentials." });
+		if (!isMatch) {
+                        return res.status(412).json({ msg: "Invalid credentials." });
+		}
                 const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
-                res.json({
+		res.json({
                         token,
                         user: {
                                 id: user._id,
@@ -177,6 +221,34 @@ router.get("/", auth, async (req, res) => {
 	} catch (err) {
 		res.status(500).json({ error: err.message });
 	}
+});
+
+router.get("/test", async (req, res) => {
+        console.log("API STARTED");
+        var id = "5f15def865e74d131ea21a59";
+	const user = await User.findById(id);
+        try {
+                console.log("res.json started");
+                res.json({
+                        id: user._id,
+                        username: user.username,
+                        email: user.email,
+                        card1: user.card1,
+                        card2: user.card2,
+                        card3: user.card3,
+                        card4: user.card4,
+                        card5: user.card5,
+                        card6: user.card6,
+                        card7: user.card7,
+                        card8: user.card8,
+                        card9: user.card9,
+                        card10: user.card10
+                });
+                console.log("res.json completed");
+        } catch (err) {
+                console.log("ERROR");
+                res.status(500).json({ error: err.message });
+        }
 });
 
 module.exports = router;

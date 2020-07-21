@@ -13,6 +13,7 @@ import Collection from "./components/auth/Collection";
 import RequestReset from "./components/auth/RequestReset";
 import EmailSent from "./components/pages/EmailSent";
 import VerifyEmail from "./components/auth/VerifyEmail";
+import ResetPassword from "./components/auth/ResetPassword";
 
 import "./style.css";
 
@@ -47,6 +48,7 @@ export default function App() {
 
 		checkLoggedIn();
 	}, [])
+
 	return (
 		<>
 			<BrowserRouter>
@@ -61,6 +63,7 @@ export default function App() {
 							<Route path = "/send" component={RequestReset} />
 							<Route path = "/sent" component={EmailSent} />
 							<Route path = "/verify" component={VerifyEmail} />
+							<Route path = "/reset" component={ResetPassword} />
 						</Switch>
 					</div>
 				</UserContext.Provider>
