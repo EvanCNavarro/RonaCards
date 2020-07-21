@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow } from 'enzyme';
 import App from './App';
 
 it('renders without crashing', () => {
@@ -12,7 +11,3 @@ it('renders without crashing', () => {
 it('My Test Case', () => {
     expect(true).toEqual(true);
 });
-
-// it('Component', () => {
-//     expect(wrapper.find('Button')).;
-// });
