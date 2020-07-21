@@ -13,7 +13,7 @@ it('My Test Case', () => {
 });
 
 it('renders without crashing_2', () => {
-    const div = document.createElement('form');
+    const form = document.createElement('form');
     ReactDOM.render(<App />, form);
     ReactDOM.unmountComponentAtNode(form);
 });
