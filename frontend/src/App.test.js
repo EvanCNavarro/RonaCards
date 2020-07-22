@@ -30,26 +30,5 @@ it('Testing if Routing Works', () => {
     ReactDOM.unmountComponentAtNode(Route);
 });
 
-const axios = require('axios');
-const Users = require('./App');
-
-jest.mock('axios');
-
-test('should fetch users', () => {
-
-    const users = [{
-
-        "username": "evan",
-        "email": "evancnavarro@gmail.com",
-        "password": "password"
-    }];
-
-    const resp = { data: users };
-
-    axios.get.mockImplementation(() => Promise.resolve(resp));
-
-    Users.all().then(resp => expect(resp.data).toEqual(users));
-});
-
 
 
