@@ -31,3 +31,40 @@ it('Testing if UserContext Works', () => {
     ReactDOM.render(<Register />, UserContext);
     ReactDOM.unmountComponentAtNode(UserContext);
 });
+
+test('check firstUser toEqual', () => {
+    let firstUser = {
+        username: "evan",
+        email: "evancnavarro@gmail.com",
+        password: "password"
+    };
+
+    let secondUser = {
+        username: "evan",
+        email: "evancnavarro@gmail.com",
+        password: "password"
+    };
+    expect(firstUser).toEqual(secondUser);
+});
+
+//checking for truthy values - All the tests will return truthy.
+test('check for users truthy', function () {
+    const users = {
+        Ataberk: null,
+        Patrick: undefined,
+        Sandy: false
+    }
+    expect(users.Ataberk).not.toBeTruthy(); // True - Pass
+    expect(users.Patrick).toBeUndefined(); // True - Pass
+    expect(users.Sandy).toBeFalsy();      // True - Pass
+});
+
+//testing arrays of users
+const users = [
+    'Mudit',
+    'Faizar',
+    'Evan'
+];
+test('test for a value in users', function () {
+    expect(users).toEqual(expect.arrayContaining(['Mudit', 'Evan']));
+});
