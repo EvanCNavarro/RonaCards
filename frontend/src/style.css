@@ -169,6 +169,24 @@ body {
 	border-radius: 7px;
 }
 
+.hometext {
+	width: 100%;
+	margin: 1rem 0;
+        padding: 0.5rem;
+        border: 1px solid;
+        border-radius: 7px;
+        background-color: #f0f0f0;
+        font-size: 1.2rem;
+}
+
+.homepage button {
+        padding: 0.4rem 0.5rem;
+        font-size: 1.2rem;
+        border-radius: 7px;
+        border: 1px solid;
+        background-color: #c8ecb7;
+}
+
 .Card
 {
 	position: absolute;
