@@ -82,6 +82,6 @@ const users = [
     'Faizar',
     'Evan'
 ];
-test('test for a value in users', function () {
+test('Test for a value in users', function () {
     expect(users).toEqual(expect.arrayContaining(['Mudit', 'Evan']));
 });
