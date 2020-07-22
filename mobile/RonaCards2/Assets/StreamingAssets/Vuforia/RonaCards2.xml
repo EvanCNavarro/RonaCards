@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="card10_cure" size="500.000000 750.000000" />
+    <ImageTarget name="card9_oxygen" size="500.000000 750.000000" />
+    <ImageTarget name="card8_heart" size="500.000000 750.000000" />
+    <ImageTarget name="card7_toe" size="500.000000 750.000000" />
+    <ImageTarget name="card6_blue" size="500.000000 750.000000" />
+    <ImageTarget name="card5_diarrhea" size="500.000000 750.000000" />
+    <ImageTarget name="card4_taste" size="500.000000 750.000000" />
+    <ImageTarget name="card3_breath" size="500.000000 750.000000" />
+    <ImageTarget name="card2_nose" size="500.000000 750.000000" />
+    <ImageTarget name="card1_fever" size="500.000000 750.000000" />
+  </Tracking>
+</QCARConfig>
