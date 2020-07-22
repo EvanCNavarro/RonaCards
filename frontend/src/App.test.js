@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import * as axios from "axios";
 // const { MongoDB } = require('mongodb');
 // require('custom-env').env('dev');
 
@@ -22,7 +23,7 @@ it('Testing if Switch Work', () => {
 
 it('Testing if BrowserRouter Works', () => {
     const BrowserRouter = document.createElement('BrowserRouter');
-    ReactDOM.render(<App />, RoBrowserRouterute);
+    ReactDOM.render(<App />, BrowserRouter);
     ReactDOM.unmountComponentAtNode(BrowserRouter);
 });
 
