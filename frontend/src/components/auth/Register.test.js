@@ -59,12 +59,29 @@ test('Check that users are there', function () {
     expect(users.Sandy).toBeFalsy();      // True - Pass
 });
 
+test('Mock test for user log in ', function () {
+    const login = {
+        username: "evan",
+        password: "password"
+    }
+
+    expect(login.username).not.toBeUndefined; // True - Pass
+});
+
+test('Check if token is here ', function () {
+    const hasToken = {
+        token: "5f184c67233a40b740dec6ac",
+    }
+
+    expect(hasToken.token).not.toBeUndefined; // True - Pass
+});
+
 //testing arrays of users
 const users = [
     'Mudit',
     'Faizar',
     'Evan'
 ];
-test('Mock test for an array of users', function () {
+test('test for a value in users', function () {
     expect(users).toEqual(expect.arrayContaining(['Mudit', 'Evan']));
 });
