@@ -25,3 +25,9 @@ it('Testing if Routing Works', () => {
     ReactDOM.render(<Register />, Route);
     ReactDOM.unmountComponentAtNode(Route);
 });
+
+it('Testing if UserContext Works', () => {
+    const UserContext = document.createElement('UserContext');
+    ReactDOM.render(<Register />, UserContext);
+    ReactDOM.unmountComponentAtNode(UserContext);
+});
