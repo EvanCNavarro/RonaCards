@@ -36,6 +36,8 @@ it('Testing if Routing Works', () => {
 jest.mock("axios");
 
 test("good response", () => {
-    axios.get.mockImplementation(() => Promise.resolve({ Hello }));
+    axios.get.mockImplementation(() => Promise.resolve({
+        data: 'data'
+    }));
     // ...
 });
