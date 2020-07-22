@@ -36,7 +36,7 @@ it('Testing if UserContext Works', () => {
     ReactDOM.unmountComponentAtNode(UserContext);
 });
 
-test('check firstUser toEqual', () => {
+test('Check if two users are the same', () => {
     let firstUser = {
         username: "evan",
         email: "evancnavarro@gmail.com",
@@ -52,7 +52,7 @@ test('check firstUser toEqual', () => {
 });
 
 //checking for truthy values - All the tests will return truthy.
-test('check for users truthy', function () {
+test('Check that users are there', function () {
     const users = {
         Ataberk: null,
         Patrick: undefined,
@@ -61,6 +61,15 @@ test('check for users truthy', function () {
     expect(users.Ataberk).not.toBeTruthy(); // True - Pass
     expect(users.Patrick).toBeUndefined(); // True - Pass
     expect(users.Sandy).toBeFalsy();      // True - Pass
+});
+
+test(''Mock test for user log in ', function () {
+    const login = {
+        username: "evan",
+        password: "password"
+    }
+
+expect(login.username).not.toBeUndefined; // True - Pass
 });
 
 //testing arrays of users
