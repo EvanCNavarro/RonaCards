@@ -63,13 +63,13 @@ test('Check that users are there', function () {
     expect(users.Sandy).toBeFalsy();      // True - Pass
 });
 
-test(''Mock test for user log in ', function () {
+test('Mock test for user log in ', function () {
     const login = {
         username: "evan",
         password: "password"
     }
 
-expect(login.username).not.toBeUndefined; // True - Pass
+    expect(login.username).not.toBeUndefined; // True - Pass
 });
 
 //testing arrays of users
