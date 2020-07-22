@@ -37,7 +37,7 @@ export default function Login() {
 
 	return (
 		<div className = "page">
-			<h2>Log in:</h2>
+			<h2>Enter your account information: </h2>
 			{error && (
 				<ErrorNotice message={error} clearError={() => setError(undefined)} />
 			)}
@@ -56,8 +56,8 @@ export default function Login() {
 					onChange={(e) => setPassword(e.target.value)}
 				/>
 
-				<input type="submit" value="Log in" />
 				<button onClick = { requestLink } ><input type="reset" value="Forgot Your Password?" /></button>
+				<input type="submit" value="Log In" />
 			</form>
 		</div>
 	);

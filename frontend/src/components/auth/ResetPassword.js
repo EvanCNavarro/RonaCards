@@ -14,16 +14,12 @@ export default function ResetPassword() {
 	const reset = async (e) => {
 		let params = new URLSearchParams(window.location.search);
         	const id = params.get('_id');
-		console.log("entered RESET SUBMIT BUTTON API");
 		try {
 			const user = { id, password }
-			console.log(id);
-			console.log(password);
 			const resetRes = await Axios.put(
 				"http://rona.cards:4000/users/newPassword",
 				user
 			);
-			console.log("API WORKED");
 			history.push("/");
 		} catch (err) {
 			err.response.data.msg && setError(err.response.data.msg);
@@ -31,7 +27,7 @@ export default function ResetPassword() {
 	};
 
 	return ( <div className = "page">
-			<h2>Reset Your Password:</h2>
+			<h2>Enter your new password:</h2>
 			{error && (
 				<ErrorNotice message={error} clearError={() => setError(undefined)} />
 			)}

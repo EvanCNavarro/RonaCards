@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import UserContext from "../../context/UserContext";
 import Axios from "axios";
 import ErrorNotice from "../misc/ErrorNotice";
+import emojiThumbsUp from '../../images/email_verified.png';
 
 export default function VerifyEmail() {
 
@@ -12,22 +13,21 @@ export default function VerifyEmail() {
 	const history = useHistory();
 		let params = new URLSearchParams(window.location.search);
 		const id = params.get('_id');
-		console.log("entered RESET SUBMIT BUTTON API");
 		try {
 			const user = { id };
 			const verifyRes = Axios.put(
 				"http://rona.cards:4000/users/verify",
 				user
 			);
-			console.log("API ENTERED AND NOW PUSHED FROM FRONT END");
 		} catch (err) {
 			err.response.data.msg && setError(err.response.data.msg);
 		}
 
 	return ( <div className = "page">
 			<div className = "notification">
-				<h2>Thank you! Your email has now been verified.</h2>
-				<h4>Feel free to navigate to our login page.</h4>
+				<h2>GREAT! Your email has been verified.</h2>
+				<h4>You're now able to log in and see your card collection.</h4>
+				<img src={ emojiThumbsUp } alt="Email Verified" />
 				{error && (
 					<ErrorNotice message={error} clearError={() => setError(undefined)} />
 				)}

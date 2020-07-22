@@ -28,7 +28,7 @@ export default function RequestReset() {
 	};
 
 	return (<div className="page">
-		<h2>Get Link to Reset Password:</h2>
+		<h2>Request a password reset: </h2>
 		{error && (
 			<ErrorNotice message={error} clearError={() => setError(undefined)} />
 		)}
