@@ -46,10 +46,20 @@ body {
 
 #header {
 	height: 100px;
-	display: flex;
 	justify-content: space-between;
+	display: flex;
 	align-items: center;
-	background-color: #509ac4;
+	background-color: #0B0D1F;
+}
+
+#header .homebase h1 {
+	display: inline-block;
+	font-weight: bolder;
+	color: white;
+}
+
+#header .homebase {
+	padding-left: 30px;
 }
 
 #header .title {
@@ -65,13 +75,15 @@ body {
 }
 
 #header .auth-options button {
-	padding: 0 1rem;
-	background-color: #70b0d5;
+	padding: 0 3rem;
+	background-color: #FF0054;
 	font-size: 1.1rem;
+	color: white;
+	font-weight: bold;
 }
 
 #header .auth-options button:hover {
-	background-color: #417795;
+	background-color: #9E0059;
 }
 
 .notification {
