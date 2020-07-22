@@ -42,6 +42,17 @@ export default function Collection() {
 	var heartbeat = heartbeat_absent;
 	var senseOfTaste = senseOfTaste_absent;
 	var respiration = respiration_absent;
+	
+	var one = "hidden_hover1";
+	var two = "hidden_hover2";
+	var three = "hidden_hover3";
+	var four = "hidden_hover4";
+	var five = "hidden_hover5";
+	var six = "hidden_hover6";
+	var seven = "hidden_hover7";
+	var eight = "hidden_hover8";
+	var nine = "hidden_hover9";
+
 
     const [user, setUsername] = useState("");
 	var [card1, setCard1] = useState('');
@@ -95,49 +106,67 @@ export default function Collection() {
 		collection[counter] = collection[counter].toString();
 	}
 		// only a test
-		if(collection[1] === 'true')
+		if(collection[0] === 'true')
 		{
 			fever = fever_present;
+			one = 'HoverBox1';
+		}
+
+		if(collection[1] === 'true')
+		{
+			cold = cold_present;
+			two = 'HoverBox2';
+
 		}
 
 		if(collection[2] === 'true')
 		{
-			cold = cold_present;
-		}
+			breathingDifficulty = breathingDifficulty_present;
+			three = 'HoverBox3';
 
+		}
+        
 		if(collection[3] === 'true')
 		{
-			breathingDifficulty = breathingDifficulty_present;
+			senseOfTaste = senseOfTaste_present;
+			// one = 'HoverBox4';
+			four = 'HoverBox4';
+
 		}
         
 		if(collection[4] === 'true')
 		{
-			senseOfTaste = senseOfTaste_present;
+			diahrrea = diahrrea_present;
+			five = 'HoverBox5';
+
 		}
         
 		if(collection[5] === 'true')
 		{
-			diahrrea = diahrrea_present;
+			blueLips = blueLips_present;
+			six = 'HoverBox6';
+
 		}
         
 		if(collection[6] === 'true')
 		{
-			blueLips = blueLips_present;
+			feet = feet_present;
+			seven = 'HoverBox7';
+
 		}
         
 		if(collection[7] === 'true')
 		{
-			feet = feet_present;
+			heartbeat = heartbeat_present;
+			eight = 'HoverBox8';
+
 		}
         
 		if(collection[8] === 'true')
 		{
-			heartbeat = heartbeat_present;
-		}
-        
-		if(collection[9] === 'true')
-		{
 			respiration = respiration_present;
+			nine = 'HoverBox9';
+
 		}
         
         return (
@@ -149,19 +178,17 @@ export default function Collection() {
 			<div className = "collection">
 			<div class="common_box">
               <p class="common">COMMON</p>
-              <img class="common_1" src={fever} alt="common_1" />
-			  <div class="HoverBox1">
+			  <img class="common_1" src={fever} alt="common_1" />
+			  <div className={one}>
 			 	 <img class="Card" src={card1_fever} alt="common_1" />
-				  <div class="card_text">
-					<p class="card_heading">FEVER</p>
-					<p class="card_details"> LEVEL 1</p>
-					<p class="card_details"> You're Burning Up!</p>
-
-				  </div>
-				 
+					<div class="card_text">
+						<p class="card_heading">FEVER</p>
+						<p class="card_details"> LEVEL 1</p>
+						<p class="card_details"> You're Burning Up!</p>
+					</div>	 
 			  </div>
               <img class="common_2" src={cold} alt="common_1" />
-			  <div class="HoverBox2">
+			  <div class={two}>
 			 	 <img class="Card" src={card2_nose} alt="common_1" />
 				  <div class="card_text">
 					<p class="card_heading">Runny Nose</p>
@@ -172,7 +199,7 @@ export default function Collection() {
 				 
 			  </div>
               <img class="common_3" src={breathingDifficulty} alt="common_1" />
-			  <div class="HoverBox3">
+			  <div class={three}>
 			 	 <img class="Card" src={card3_breath} alt="common_1" />
 				  <div class="card_text">
 					<p class="card_heading">Shortness of Breath</p>
@@ -187,7 +214,7 @@ export default function Collection() {
             <div class="uncommon_box">
             <p class="common">UNCOMMON</p>
               <img class="uncommon_1" src={senseOfTaste} alt="uncommon_1" />
-			  	<div class="HoverBox4">
+			  	<div class={four}>
 			 	 <img class="Card" src={card4_taste} alt="common_1" />
 				  <div class="card_text">
 					<p class="card_heading">Loss of Taste</p>
@@ -196,7 +223,7 @@ export default function Collection() {
 				  </div>
 				</div>
               <img class="uncommon_2" src={diahrrea} alt="uncommon_1" />
-			  <div class="HoverBox5">
+			  <div class={five}>
 			 	 <img class="Card" src={card5_diarrhea} alt="common_1" />
 				  <div class="card_text">
 					<p class="card_heading">Diarrhea</p>
@@ -205,7 +232,7 @@ export default function Collection() {
 				  </div>
 				</div>
               <img class="uncommon_3" src={blueLips} alt="uncommon_1" />
-			  <div class="HoverBox6">
+			  <div class={six}>
 			 	 <img class="Card" src={card6_blue} alt="common_1" />
 				  <div class="card_text">
 					<p class="card_heading">Blue Lips</p>
@@ -219,7 +246,7 @@ export default function Collection() {
             <p class="common">RARE</p>
 
               <img class="rare_1" src={feet} alt="common_1" />
-			  <div class="HoverBox7">
+			  <div class={seven}>
 			 	 <img class="Card" src={card7_toe} alt="common_1" />
 				  <div class="card_text">
 					<p class="card_heading">COVID Toe</p>
@@ -228,7 +255,7 @@ export default function Collection() {
 				  </div>
 				</div>
               <img class="rare_2" src={heartbeat} alt="common_1" />
-			  <div class="HoverBox8">
+			  <div class={eight}>
 			 	 <img class="Card" src={card8_heart} alt="common_1" />
 				  <div class="card_text">
 					<p class="card_heading">Cardiovascular Distress</p>
@@ -237,7 +264,7 @@ export default function Collection() {
 				  </div>
 				</div>
               <img class="rare_3" src={respiration} alt="common_1" />
-			  <div class="HoverBox9">
+			  <div class={nine}>
 			 	 <img class="Card" src={card9_oxygen} alt="common_1" />
 				  <div class="card_text">
 					<p class="card_heading">Happy Hypoxia</p>
