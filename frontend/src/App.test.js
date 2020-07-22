@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import * as axios from "axios";
-// const { MongoDB } = require('mongodb');
-// require('custom-env').env('dev');
 
 it('My First Test Case', () => {
     expect(true).toEqual(true);
@@ -33,11 +30,26 @@ it('Testing if Routing Works', () => {
     ReactDOM.unmountComponentAtNode(Route);
 });
 
-jest.mock("axios");
+const axios = require('axios');
+const Users = require('./App');
 
-test("good response", () => {
-    axios.get.mockImplementation(() => Promise.resolve({
-        data: 'data'
-    }));
-    // ...
+jest.mock('axios');
+
+test('should fetch users', () => {
+
+    const users = [{
+
+        "username": "evan",
+        "email": "evancnavarro@gmail.com",
+        "password": "password"
+    }];
+
+    const resp = { data: users };
+
+    axios.get.mockImplementation(() => Promise.resolve(resp));
+
+    Users.all().then(resp => expect(resp.data).toEqual(users));
 });
+
+
+
