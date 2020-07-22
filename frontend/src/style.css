@@ -266,8 +266,8 @@ body {
 .common_2
 {
     position: absolute;
-    right:5%;
-    top: 5%;
+    left: 37.5%;
+	bottom: 5%;
     width: 25%;
 }
 .HoverBox3
@@ -288,7 +288,7 @@ body {
 .common_2:hover ~ .HoverBox2 
 {
 	position: relative;
-	left: 100%;
+	left: 65%;
 	bottom: 250%;
 	visibility: visible;
 	z-index: 1;
@@ -297,9 +297,9 @@ body {
 .common_3
 {
     position: absolute;
-    left: 37.5%;
-    bottom: 5%;
-    width: 25%;
+	width: 25%;
+	right:5%;
+    top: 5%;
 }
 .common_3:hover ~ .HoverBox3
 {
