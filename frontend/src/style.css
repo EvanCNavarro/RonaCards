@@ -242,7 +242,7 @@ body {
 }
 .HoverBox1 
 {
-	border: 5px solid lightgray;
+	border: 8px dashed #97cf7c;
 	border-radius: 10px;
 	font: inherit;
 	visibility: hidden;
@@ -251,7 +251,7 @@ body {
 	/* position: relative; */
 	left: 0;
 	right: 0;
-	background-color: lightgray;
+	background-color: #c9ebb9;
 	opacity: 97%;
 	z-index: -1;
 } 
@@ -268,8 +268,8 @@ body {
 
 .HoverBox2
 {
-	border: 5px solid lightgray;
-	border-radius: 10px;
+	border: 8px dashed #97cf7c;
+	border-radius: 15px;
 	font: inherit;
 	visibility: hidden;
 	max-width: 100%;
@@ -277,7 +277,7 @@ body {
 	/* position: relative; */
 	left: 0;
 	right: 0;
-	background-color: lightgray;
+	background-color: #c9ebb9;
 	opacity: 97%;
 	z-index: -1;
 }
@@ -290,8 +290,8 @@ body {
 }
 .HoverBox3
 {
-	border: 5px solid lightgray;
-	border-radius: 10px;
+	border: 8px dashed #97cf7c;
+	border-radius: 15px;
 	font: inherit;
 	visibility: hidden;
 	min-width: 100%;
@@ -299,7 +299,7 @@ body {
 	/* position: relative; */
 	left: 0;
 	right: 0;
-	background-color: lightgray;
+	background-color: #c9ebb9;
 	opacity: 97%;
 	z-index: -1;
 }
@@ -351,8 +351,8 @@ body {
 }
 .HoverBox4
 {
-	border: 5px solid lightgray;
-	border-radius: 10px;
+	border: 8px dashed #97cf7c;
+	border-radius: 15px;
 	font: inherit;
 	visibility: hidden;
 	min-width: 100%;
@@ -360,7 +360,7 @@ body {
 	/* position: relative; */
 	left: 0;
 	right: 0;
-	background-color: lightgray;
+	background-color: #c9ebb9;
 	opacity: 97%;
 	z-index: -1;
 }
@@ -381,8 +381,8 @@ body {
 }
 .HoverBox5
 {
-	border: 5px solid lightgray;
-	border-radius: 10px;
+	border: 8px dashed #97cf7c;
+	border-radius: 15px;
 	font: inherit;
 	visibility: hidden;
 	min-width: 100%;
@@ -390,7 +390,7 @@ body {
 	/* position: relative; */
 	left: 0;
 	right: 0;
-	background-color: lightgray;
+	background-color: #c9ebb9;
 	opacity: 97%;
 	z-index: -1;
 }
@@ -412,8 +412,8 @@ body {
 }
 .HoverBox6
 {
-	border: 5px solid lightgray;
-	border-radius: 10px;
+	border: 8px dashed #97cf7c;
+	border-radius: 15px;
 	font: inherit;
 	visibility: hidden;
 	min-width: 100%;
@@ -421,7 +421,7 @@ body {
 	/* position: relative; */
 	left: 0;
 	right: 0;
-	background-color: lightgray;
+	background-color: #c9ebb9;
 	opacity: 97%;
 	z-index: -1;
 }
@@ -454,8 +454,8 @@ body {
 }
 .HoverBox7
 {
-	border: 5px solid lightgray;
-	border-radius: 10px;
+	border: 8px dashed #97cf7c;
+	border-radius: 15px;
 	font: inherit;
 	visibility: hidden;
 	min-width: 100%;
@@ -463,7 +463,7 @@ body {
 	/* position: relative; */
 	left: 0;
 	right: 0;
-	background-color: lightgray;
+	background-color: #c9ebb9;
 	opacity: 97%;
 	z-index: -1;
 }
@@ -478,14 +478,14 @@ body {
 .rare_2
 {
     position: absolute;
-    right:5%;
-    top: 5%;
+    left: 37.5%;
+    bottom: 5%;
     width: 25%;
 }
 .HoverBox8
 {
-	border: 5px solid lightgray;
-	border-radius: 10px;
+	border: 8px dashed #97cf7c;
+	border-radius: 15px;
 	font: inherit;
 	visibility: hidden;
 	min-width: 100%;
@@ -493,29 +493,29 @@ body {
 	/* position: relative; */
 	left: 0;
 	right: 0;
-	background-color: lightgray;
+	background-color: #c9ebb9;
 	opacity: 97%;
 	z-index: -1;
 }
 .rare_2:hover ~ .HoverBox8
 {
 	position: relative;
-	left: -35%;
-	top:-300%;
+	left: -65%;
+	top:-250%;
 	visibility: visible;
 	z-index: 1;
 }
 .rare_3
 {
     position: absolute;
-    left: 37.5%;
-    bottom: 5%;
-    width: 25%;
+	width: 25%;
+	right:5%;
+    top: 5%;
 }
 .HoverBox9
 {
-	border: 5px solid lightgray;
-	border-radius: 10px;
+	border: 8px dashed #97cf7c;
+	border-radius: 15px;
 	font: inherit;
 	visibility: hidden;
 	min-width: 100%;
@@ -523,14 +523,15 @@ body {
 	/* position: relative; */
 	left: 0;
 	right: 0;
-	background-color: lightgray;
+	background-color: #c9ebb9;
 	opacity: 97%;
 	z-index: -1;
 }
 .rare_3:hover ~ .HoverBox9
 {
 	position: relative;
-	left: -65%;
+
+	left: -35%;
 	top:-450%;
 	visibility: visible;
 	z-index: 1;
