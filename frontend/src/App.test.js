@@ -30,5 +30,9 @@ it('Testing if Routing Works', () => {
     ReactDOM.unmountComponentAtNode(Route);
 });
 
-
+it('Testing if UserContext Works', () => {
+    const UserContext = document.createElement('UserContext');
+    ReactDOM.render(<App />, UserContext);
+    ReactDOM.unmountComponentAtNode(UserContext);
+});
 
