@@ -57,3 +57,27 @@ test('check gfgObj toEqual', () => {
     expect(gfgObj).toEqual(testObj);
 });
 
+//checking for truthy values - All the tests will return truthy.
+test('check for truthy', function () {
+    const gfgObj = {
+        first: null,
+        second: undefined,
+        third: false
+    }
+    expect(gfgObj.first).not.toBeTruthy(); // True - Pass
+    expect(gfgObj.second).toBeUndefined(); // True - Pass
+    expect(gfgObj.third).toBeFalsy();      // True - Pass
+});
+
+//testing arrays
+const gfgUsers = [
+    'user1',
+    'user2',
+    'user3'
+];
+test('test for a value in gfgUsers', function () {
+    // expect(gfgUsers).toContain('user2');
+    // expect(gfgUsers).not.toContain('user2');
+    //expect array containing
+    expect(gfgUsers).toEqual(expect.arrayContaining(['user1', 'user3']));
+});
