@@ -36,48 +36,39 @@ it('Testing if UserContext Works', () => {
     ReactDOM.unmountComponentAtNode(UserContext);
 });
 
-test('check gfgObj toEqual', () => {
-    let gfgObj = {
-        name: "GFG",
-        type: "company",
-        members: {
-            employees: 100,
-            contributors: 500
-        }
+test('check firstUser toEqual', () => {
+    let firstUser = {
+        username: "evan",
+        email: "evancnavarro@gmail.com",
+        password: "password"
     };
 
-    let testObj = {
-        name: "GFG",
-        type: "company",
-        members: {
-            employees: 100,
-            contributors: 500
-        }
+    let secondUser = {
+        username: "evan",
+        email: "evancnavarro@gmail.com",
+        password: "password"
     };
-    expect(gfgObj).toEqual(testObj);
+    expect(firstUser).toEqual(secondUser);
 });
 
 //checking for truthy values - All the tests will return truthy.
-test('check for truthy', function () {
-    const gfgObj = {
-        first: null,
-        second: undefined,
-        third: false
+test('check for users truthy', function () {
+    const users = {
+        Ataberk: null,
+        Patrick: undefined,
+        Sandy: false
     }
-    expect(gfgObj.first).not.toBeTruthy(); // True - Pass
-    expect(gfgObj.second).toBeUndefined(); // True - Pass
-    expect(gfgObj.third).toBeFalsy();      // True - Pass
+    expect(users.Ataberk).not.toBeTruthy(); // True - Pass
+    expect(users.Patrick).toBeUndefined(); // True - Pass
+    expect(users.Sandy).toBeFalsy();      // True - Pass
 });
 
-//testing arrays
-const gfgUsers = [
-    'user1',
-    'user2',
-    'user3'
+//testing arrays of users
+const users = [
+    'Mudit',
+    'Faizar',
+    'Evan'
 ];
-test('test for a value in gfgUsers', function () {
-    // expect(gfgUsers).toContain('user2');
-    // expect(gfgUsers).not.toContain('user2');
-    //expect array containing
-    expect(gfgUsers).toEqual(expect.arrayContaining(['user1', 'user3']));
+test('test for a value in users', function () {
+    expect(users).toEqual(expect.arrayContaining(['Mudit', 'Evan']));
 });
