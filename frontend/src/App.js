@@ -31,7 +31,7 @@ export default function App() {
 				token = "";
 			}
 			const tokenRes = await Axios.post(
-				"http://rona.cards:4000/users/tokenIsValid",
+				"http://rona.cards:4000/users/isTokenValid",
 				null,
 				{ headers: { "x-auth-token": token } }
 			);
