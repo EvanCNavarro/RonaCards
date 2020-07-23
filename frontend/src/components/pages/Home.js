@@ -27,8 +27,10 @@ export default function Home() {
 					<p>We hope the by collecting all of our Symptom Cards, you will be well equipped to identify any future signs of COVID-19 while you’re in the company of loved ones, family, and friends.</p>
 					<p><b>STOP THE SPREAD</b> of the Coronavirus by collecting all of the cards, and teaching others of your newly gained knowledge!</p>
 				</div>
-
-				<a href="https://www.github.com/EvanCNavarro/RonaCards" target="_blank"><button><input type="submit" value="View on GitHub" /></button></a>
+				<div className="homebuttons">
+					<a href="https://landing.google.com/screener/covid19?source=google" target="_blank"><button><input type="submit" value="Click here to take a free COVID-19 Self-Assessment Quiz" /></button></a>
+					<a href="https://www.github.com/EvanCNavarro/RonaCards" target="_blank"><button><input type="reset" value="View our Project on GitHub" /></button></a>
+				</div>
 			</div>
 		</div>
 	)

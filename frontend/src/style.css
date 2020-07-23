@@ -127,13 +127,29 @@ body {
 	outline: none;
 }
 .form input[type="submit"],
-.form input[type="verify"] {
-	padding: 0.4rem 0.5rem;
+.form input[type="verify"],
+.homepage input[type="submit"] {
+	padding: 0.5rem 1rem;
 	font-size: 1.2rem;
+	font-weight: bold;
 	border-radius: 7px;
 	border: 1px solid;
-	background-color: #c8ecb7;
+	background-color: #4bcf96;
 }
+
+.form input[type="submit"]:hover{
+	background-color: #268ee4;
+}
+
+.form input[type="verify"]:hover{
+	background-color: #268ee4;
+}
+
+.form input[type="reset"]:hover{
+        background-color: #ff0054;
+}
+
+
 
 .form input[type="verify"] {
 	align: center;
@@ -142,12 +158,15 @@ body {
 
 
 .form input[type="reset"] {
-        padding: 0.4rem 0.5rem;
-        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
         border-radius: 7px;
         border: 1px solid;
-        background-color: #EE9082;
+        background-color: #fb3861;
 }
+
+
 
 .error-notice {
 	margin: 1rem 0;
@@ -177,14 +196,41 @@ body {
         border-radius: 7px;
         background-color: #f0f0f0;
         font-size: 1.2rem;
+	padding: 2.2rem;
 }
 
-.homepage button {
-        padding: 0.4rem 0.5rem;
+.hometext ul,
+.hometext li {
+	margin: 1rem;
+	margin-left: 4rem;
+}
+
+.homebuttons button{
+	display: block;
+	padding: 0.5rem;
+	margin-right: .5rem 0;
+}
+.homepage input[type="reset"] {
+        padding: 0.5rem 1rem;
         font-size: 1.2rem;
+        font-weight: bold;
         border-radius: 7px;
         border: 1px solid;
-        background-color: #c8ecb7;
+        background-color: #fb3861;
+}
+
+.homepage button input {
+	color: black;
+}
+
+.homepage input[type="submit"]:hover {
+        background-color: #268ee4;
+}
+
+.homepage input[type="reset"]:hover {
+	background-color: #ff0054;
+	        border: 1px solid;
+        border-radius: 7px;
 }
 
 .Card

@@ -56,8 +56,8 @@ export default function Login() {
 					onChange={(e) => setPassword(e.target.value)}
 				/>
 
-				<button onClick = { requestLink } ><input type="reset" value="Forgot Your Password?" /></button>
 				<input type="submit" value="Log In" />
+				<button onClick = { requestLink } ><input type="reset" value="Forgot Your Password?" /></button>
 			</form>
 		</div>
 	);

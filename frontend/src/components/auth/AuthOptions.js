@@ -10,7 +10,6 @@ export default function AuthOptions() {
 	const register = () => history.push("/register");
 	const login = () => history.push("/login");
 	const collection = () => history.push("/collection");
-	const symptoms = () => history.push("/symptoms");
 	const logout = () => {
 		setUserData({
 			token: undefined,
@@ -24,7 +23,6 @@ export default function AuthOptions() {
 		<nav className="auth-options">
 		{userData.user ? (
 			<>
-				<button onClick = { symptoms } >Symptoms?</button>
 				<button onClick = { collection } >Collection</button>
 				<button onClick = { logout } >Log Out</button>
 			</>
