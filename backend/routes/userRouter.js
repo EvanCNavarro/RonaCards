@@ -281,18 +281,12 @@ router.put("/newPassword", async (req, res) => {
 
 //user login = check provided user credentials and provide created token
 router.post("/login", async (req, res) => {
-	console.log("-----LOGIN API HIT & STARTED-----");
 	try {
 		//get the provided username, and password, then store values
 		const { username, password } = req.body;
-		console.log("BELOW IS: req.body, username, password");
-		console.log(req.body);
-		console.log(username);
-		console.log(password);
 
 		//enter check then print error, IF the email or password provided is null/empty
 		if (!username || !password) {
-			console.log("ERROR: username || password is null");
 			return res.status(400).json({ msg: "Fields cannot be empty!" });
 		}
 
@@ -301,13 +295,11 @@ router.post("/login", async (req, res) => {
 
 		//enter check then print error, IF the user does not exist
 		if (!user) {
-			console.log("ERROR: user does not exist with that username");
 			return res.status(404).json({ msg: "Username does not exist!" });
 		}
 
 		//enter check then print error, IF the user's email has NOT been verified
 		if (!user.verified) {
-			console.log("ERROR: the email has not been verified");
 			return res.status(401).json({ msg: "Verify email before logging in." });
 		}
 
@@ -316,15 +308,12 @@ router.post("/login", async (req, res) => {
 
 		//enter check then print error, IF password provided is incorrect
 		if (!isMatch) {
-			console.log("ERROR: wrong password");
 			return res.status(412).json({ msg: "Invalid credentials." });
 		}
-		console.log("[TOKEN] started");
 
 		//create valid JWT token while using the secret key (from '.env' file)
 		const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
 
-		console.log("[TOKEN] finished");
 		//send back the created token and user
 		res.json({
 			token,
@@ -334,9 +323,6 @@ router.post("/login", async (req, res) => {
 				email: user.email,
 			},
 		});
-
-		console.log("[TOKEN] value: ");
-		console.log(token);
 	} catch (err) {
 		res.status(500).json({ error: err.message });
 	}
