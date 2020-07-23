@@ -71,24 +71,20 @@ public class login : MonoBehaviour
             // Check for known errors
             if (loginRequest.downloadHandler.text != null)
             {
-                // JSONNode errorInfo = JSON.Parse(loginRequest.downloadHandler.text);
-                debug.text = "Known error 2";
-                string errorString = loginRequest.downloadHandler.text;
-                debug.text = "Known error 3";
+                JSONNode errorInfo = JSON.Parse(loginRequest.downloadHandler.text);
+                string errorString = errorInfo["msg"];
                 debug.text = errorString;
                 errorMessage.text = errorString;
                 Debug.LogError(errorString);
             }
             else
             {
-                debug.text = "unknown error";
                 errorMessage.text = loginRequest.error;
                 Debug.LogError(loginRequest.error);
             }
         }
         else
         {
-            debug.text = "No errors";
             // Check if communication with server is finished.
             if (loginRequest.isDone)
             {
@@ -96,18 +92,13 @@ public class login : MonoBehaviour
                 JSONNode loginInfo = JSON.Parse(loginRequest.downloadHandler.text);
                 id.text = loginInfo["user"]["id"];
                 token.text = loginInfo["token"];
-
-                debug.text = "JSON parsed";
-
+                
                 // If login successful, change view to welcome Panel.
                 welcomePanel.SetActive(true);
                 loginPanel.SetActive(false);
-
-                debug.text = "view changed";
             }
         }
-
-        // debug.text = "dispose";
+        
         // Dispose of previous login attempt & re-enable login button.
         loginButton.interactable = true;
         loginRequest.Dispose();
