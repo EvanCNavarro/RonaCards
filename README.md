@@ -1,5 +1,7 @@
 # RonaCards
 ### UCF // COP4331 // Richard Leinecker // Summer // 2020 // Group 6 // Rona Cards
+### CLASS PRESENTATION FINISHED:
+<a href="https://github.com/EvanCNavarro/RonaCards/tree/4354c9b7f5320563b52ef99f0af5aee30d8ee690" target="_blank" rel="noopener noreferrer">Link to GitHub Repository, at the time of completing our presentation to the class/professor.</a>
 ### Description:
 This is the GitHub Repository for Group 6's "Large Project":
 ### `Rona Cards`
