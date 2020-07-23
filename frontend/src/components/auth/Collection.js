@@ -28,7 +28,7 @@ import card6_blue from '../../images/cards/card6_blue.png';
 import card7_toe from '../../images/cards/card7_toe.png';
 import card8_heart from '../../images/cards/card8_heart.png';
 import card9_oxygen from '../../images/cards/card9_oxygen.png';
-import card10_cure from '../../images/cards/card10_cure.png';
+//import card10_cure from '../../images/cards/card10_cure.png';
 
 
 export default function Collection() {

@@ -1,14 +1,12 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Axios from "axios";
-import UserContext from "../../context/UserContext";
 import ErrorNotice from "../misc/ErrorNotice";
 
 export default function ResetPassword() {
 	const [password, setPassword] = useState();
 	const [error, setError] = useState();
 
-	const { setUserData } = useContext(UserContext);
 	const history = useHistory();
 
 	const reset = async (e) => {
@@ -16,7 +14,7 @@ export default function ResetPassword() {
         	const id = params.get('_id');
 		try {
 			const user = { id, password }
-			const resetRes = await Axios.put(
+			await Axios.put(
 				"http://rona.cards:4000/users/newPassword",
 				user
 			);
