@@ -76,7 +76,7 @@ test('Check if token is here ', function () {
     expect(hasToken.token).not.toBeUndefined; // True - Pass
 });
 
-//testing arrays of users
+//Testing arrays of users
 const users = [
     'Mudit',
     'Faizar',
