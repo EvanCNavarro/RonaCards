@@ -243,6 +243,7 @@ router.post("/reset", async (req, res) => {
 			////creating link that uses previously set URL
 			html: '<a href="' + resetURL + '">( Click here to reset your password )</a>',
 		});
+		res.status.json(existingEmail);
 	} catch (err) {
 		res.status(500).json({ error: err.message });
 	}
