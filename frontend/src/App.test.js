@@ -51,7 +51,7 @@ test('Check if two users are the same', () => {
     expect(firstUser).toEqual(secondUser);
 });
 
-//checking for truthy values - All the tests will return truthy.
+//Checking for truthy values - All the tests will return truthy.
 test('Check that users are there', function () {
     const users = {
         Ataberk: null,
@@ -80,7 +80,7 @@ test('Check if token is here ', function () {
     expect(hasToken.token).not.toBeUndefined; // True - Pass
 });
 
-//testing arrays of users
+//Cesting arrays of users
 const users = [
     'Mudit',
     'Faizar',
